@@ -143,7 +143,9 @@ const atmosphereFragment = /* glsl */`
   void main() {
     vec3 N = normalize(vNormalW);
     vec3 V = normalize(uCameraPos - vWorldPos);
-    float rim = pow(1.0 - max(dot(N, V), 0.0), 3.2);
+    float ndv = max(dot(N, V), 0.0);
+    // Soft outer haze plus a tighter, brighter limb line.
+    float rim = pow(1.0 - ndv, 3.2) + 0.55 * pow(1.0 - ndv, 9.0);
     float sun = smoothstep(-0.42, 0.58, dot(N, uSunDir));
     vec3 deep = vec3(0.10, 0.34, 0.82);
     vec3 sky = vec3(0.46, 0.73, 1.0);
