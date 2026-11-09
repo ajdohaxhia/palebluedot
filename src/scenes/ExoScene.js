@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitRig, TouchEnhancer } from '../engine/camera.js';
+import { createLine } from '../engine/lines.js';
 import { LabelLayer } from '../engine/labels.js';
 import { SkyDome, galacticSkyRotation } from '../engine/sky.js';
 import { makeCoronaTexture, makeGlowTexture, makeMoonTexture } from '../engine/procedural.js';
@@ -269,10 +270,9 @@ export class ExoScene {
         const r = p.smaAU * (1 - e * e) / (1 + e * Math.cos(th));
         pts.push(new THREE.Vector3(Math.cos(th) * r, 0, Math.sin(th) * r));
       }
-      const orbit = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({
-        color: color.clone().multiplyScalar(0.8), transparent: true, opacity: 0.32, depthWrite: false,
-        blending: THREE.AdditiveBlending,
-      }));
+      const orbit = createLine(pts, {
+        color: color.clone().multiplyScalar(0.8), opacity: 0.32, width: 2, blending: THREE.AdditiveBlending,
+      });
       orbit.rotation.x = inc;
       orbitGroup.add(orbit);
       const record = {

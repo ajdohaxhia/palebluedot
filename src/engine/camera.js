@@ -205,6 +205,14 @@ export class OrbitRig {
   _onPointerDown(e) {
     if (!this.enabled) return;
     if (e.button !== 0 && e.button !== 2) return;
+    if (e.pointerType === 'touch') this._touchCount = (this._touchCount || 0) + 1;
+    if (e.pointerType === 'touch' && this._dragging && e.pointerId !== this._pointerId) {
+      // A second finger landed: stop single-finger orbit so TouchEnhancer can pinch without fighting it.
+      this._dragging = false;
+      this._pointerId = null;
+      this.domElement.style.cursor = 'grab';
+      return;
+    }
     this._dragging = true;
     this._dragButton = e.button;
     this._pointerId = e.pointerId;
@@ -214,7 +222,6 @@ export class OrbitRig {
     this._lastInteraction = performance.now();
     this.domElement.setPointerCapture?.(e.pointerId);
     this.domElement.style.cursor = 'grabbing';
-    if (e.pointerType === 'touch') this._touchCount = (this._touchCount || 0) + 1;
   }
 
   _onPointerMove(e) {
@@ -247,13 +254,13 @@ export class OrbitRig {
   }
 
   _onPointerUp(e) {
+    if (e.pointerType === 'touch') this._touchCount = Math.max(0, (this._touchCount || 0) - 1);
     if (!this._dragging) return;
     const wasTap = !this._pickMoved && performance.now() - this._down.t < 450;
     this._dragging = false;
     this._pointerId = null;
     this.domElement.style.cursor = 'grab';
     if (wasTap) this.onPick?.({ x: e.clientX, y: e.clientY, button: this._dragButton });
-    this._touchCount = Math.max(0, (this._touchCount || 0) - 1);
   }
 
   _onDblClick(e) {
@@ -289,6 +296,7 @@ export class OrbitRig {
   }
 
   _pushLimit(dir, amount) {
+    if (this.noHandoff) return;
     const now = performance.now();
     if (now - (this._limitStamp || 0) > 700 || dir !== this._limitDir) this._limitPush = 0;
     this._limitStamp = now;

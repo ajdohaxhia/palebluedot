@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitRig, TouchEnhancer } from '../engine/camera.js';
+import { createLine } from '../engine/lines.js';
 import { LabelLayer } from '../engine/labels.js';
 import { SkyDome, eclipticSkyRotation } from '../engine/sky.js';
 import {
@@ -703,15 +704,13 @@ export class SolarScene {
         const v = eclipticToScene(s);
         return new THREE.Vector3(v.x, v.y, v.z);
       });
-      const geo = new THREE.BufferGeometry().setFromPoints(points);
-      const material = new THREE.LineBasicMaterial({
+      const line = createLine(points, {
         color: new THREE.Color(p.color).multiplyScalar(0.75),
-        transparent: true,
         opacity: p.id === 'earth' ? 0.55 : 0.38,
-        depthWrite: false,
+        width: 2,
+        loop: true,
         blending: THREE.AdditiveBlending,
       });
-      const line = new THREE.LineLoop(geo, material);
       line.userData.bodyId = p.id;
       this.orbitGroup.add(line);
       this.orbitLines.set(p.id, line);
@@ -775,20 +774,16 @@ export class SolarScene {
         const a = (i / 256) * Math.PI * 2;
         pts.push(new THREE.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r));
       }
-      const geo = new THREE.BufferGeometry().setFromPoints(pts);
-      const line = new THREE.Line(geo, new THREE.LineBasicMaterial({
-        color: 0x87b6e8, transparent: true, opacity: r === 1 ? 0.12 : 0.06,
-        depthWrite: false, blending: THREE.AdditiveBlending,
-      }));
+      const line = createLine(pts, {
+        color: 0x87b6e8, opacity: r === 1 ? 0.12 : 0.06, width: 1.5, blending: THREE.AdditiveBlending,
+      });
       this.gridGroup.add(line);
     }
     // radial spokes
     for (let i = 0; i < 12; i++) {
       const a = (i / 12) * Math.PI * 2;
       const pts = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(Math.cos(a) * 40, 0, Math.sin(a) * 40)];
-      const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({
-        color: 0x87b6e8, transparent: true, opacity: 0.035, depthWrite: false,
-      }));
+      const line = createLine(pts, { color: 0x87b6e8, opacity: 0.035, width: 1.25 });
       this.gridGroup.add(line);
     }
     this.gridGroup.add(new THREE.AxesHelper(0)); // no-op keeps group valid

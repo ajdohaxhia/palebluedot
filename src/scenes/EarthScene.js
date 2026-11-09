@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitRig, TouchEnhancer } from '../engine/camera.js';
+import { createLine, createLineSegments } from '../engine/lines.js';
 import { LabelLayer } from '../engine/labels.js';
 import { SkyDome, earthSkyRotation } from '../engine/sky.js';
 import { makeGlowTexture, makeCoronaTexture } from '../engine/procedural.js';
@@ -339,10 +340,7 @@ export class EarthScene {
         Math.sin(a) * MOON_MEAN_DISTANCE_UNITS,
       ));
     }
-    const geo = new THREE.BufferGeometry().setFromPoints(points);
-    this.moonOrbitLine = new THREE.Line(geo, new THREE.LineBasicMaterial({
-      color: 0x82c8f5, transparent: true, opacity: 0.09, depthWrite: false,
-    }));
+    this.moonOrbitLine = createLine(points, { color: 0x82c8f5, opacity: 0.09, width: 1.5 });
     this.moonOrbitLine.rotation.x = -OBLIQUITY;
     this.moonOrbitLine.visible = false;
     this.scene.add(this.moonOrbitLine);
@@ -452,11 +450,9 @@ export class EarthScene {
         );
       }
     }
-    const geo = new THREE.BufferGeometry().setFromPoints(pts);
-    this.graticule = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({
-      color: 0x82c8f5, transparent: true, opacity: 0.1, depthWrite: false,
-      blending: THREE.AdditiveBlending,
-    }));
+    this.graticule = createLineSegments(pts, {
+      color: 0x82c8f5, opacity: 0.1, width: 1.25, blending: THREE.AdditiveBlending,
+    });
     this.graticule.visible = false;
     this.earthMesh.add(this.graticule);
   }

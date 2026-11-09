@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitRig, TouchEnhancer } from '../engine/camera.js';
+import { createLine } from '../engine/lines.js';
 import { LabelLayer } from '../engine/labels.js';
 import { SkyDome, galacticSkyRotation } from '../engine/sky.js';
 import { makeGalaxyTexture, makeGlowTexture, makeSelectionTexture, makeBeaconTexture } from '../engine/procedural.js';
@@ -649,16 +650,12 @@ export class DeepScene {
         const a = i / 192 * Math.PI * 2;
         pts.push(new THREE.Vector3(Math.cos(a) * r * KPC_TO_MPC, 0, Math.sin(a) * r * KPC_TO_MPC));
       }
-      this.mwGrid.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({
-        color: 0x7eb6e0, transparent: true, opacity: 0.09, depthWrite: false, blending: THREE.AdditiveBlending,
-      })));
+      this.mwGrid.add(createLine(pts, { color: 0x7eb6e0, opacity: 0.09, width: 1.5, blending: THREE.AdditiveBlending }));
     }
     for (let i = 0; i < 12; i++) {
       const a = i / 12 * Math.PI * 2;
       const pts = [new THREE.Vector3(0, 0, 0), new THREE.Vector3(Math.cos(a) * 25 * KPC_TO_MPC, 0, Math.sin(a) * 25 * KPC_TO_MPC)];
-      this.mwGrid.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({
-        color: 0x7eb6e0, transparent: true, opacity: 0.05, depthWrite: false,
-      })));
+      this.mwGrid.add(createLine(pts, { color: 0x7eb6e0, opacity: 0.05, width: 1.25 }));
     }
     this.mwGrid.visible = false;
   }
@@ -933,9 +930,7 @@ export class DeepScene {
         const a = i / 256 * Math.PI * 2;
         pts.push(new THREE.Vector3(Math.cos(a) * r * KPC_TO_MPC, 0, Math.sin(a) * r * KPC_TO_MPC));
       }
-      this.galaxyGrid.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({
-        color: 0x8dbbdf, transparent: true, opacity: 0.06, depthWrite: false,
-      })));
+      this.galaxyGrid.add(createLine(pts, { color: 0x8dbbdf, opacity: 0.06, width: 1.25 }));
     }
     this.scene.add(this.galaxyGrid);
   }
