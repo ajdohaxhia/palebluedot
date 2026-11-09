@@ -37,6 +37,8 @@ const fragmentShader = /* glsl */`
     u = fract(u);
     float v = 0.5 + dec / PI;
     vec3 col = texture2D(uMap, vec2(u, v)).rgb;
+    // Lift shadows so the Milky Way and nebulae read as a full sky, not flat black.
+    col = pow(max(col, vec3(0.0)), vec3(0.85));
     col *= uTint * uBrightness;
     // Fade the exact poles slightly to reduce projection stretching.
     float polar = smoothstep(1.48, 1.5707, abs(dec));

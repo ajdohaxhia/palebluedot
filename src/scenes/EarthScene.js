@@ -236,7 +236,7 @@ export class EarthScene {
       this.assets.texture('assets/textures/earth_normal_2048.jpg', { srgb: false }),
       this.assets.texture('assets/textures/earth_clouds_2k.jpg', { srgb: false }),
       this.assets.texture('assets/textures/2k_moon.jpg'),
-      this.assets.texture('assets/textures/milkyway_starmap_4k.jpg').catch(() => null),
+      this.assets.texture('assets/textures/nasa_starmap_2020_4k_bright.jpg').catch(() => null),
     ]);
     this.dayTex = day; this.nightTex = night; this.specTex = spec;
     this.normalTex = normal;

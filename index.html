@@ -61,12 +61,12 @@
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></symbol>
   </svg>
 
-  <canvas id="scene-canvas" aria-label="Interactive 3D view of the cosmos"></canvas>
+  <canvas id="scene-canvas" aria-label="Vista 3D interattiva del cosmo"></canvas>
 
   <div class="hud" id="hud">
     <header class="topbar" role="banner">
       <div class="brand-block">
-        <button class="brand" id="brand-home" type="button" aria-label="EON home">
+        <button class="brand" id="brand-home" type="button" aria-label="Home di EON">
           <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
             <circle cx="16" cy="16" r="3" fill="currentColor"/>
             <circle cx="16" cy="16" r="10.5" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width=".9"/>
@@ -76,13 +76,13 @@
           <span class="brand-word">EON</span>
         </button>
         <div class="brand-meta">
-          <span class="brand-tagline">Atlas of the Cosmos</span>
+          <span class="brand-tagline">Atlante del Cosmo</span>
           <div class="crumbs" id="breadcrumbs" aria-live="polite">
-            <span data-crumb="domain" class="crumb-current">Earth</span>
+            <span data-crumb="domain" class="crumb-current">Terra</span>
             <span class="crumb-sep">/</span>
-            <span data-crumb="parent">Solar System</span>
+            <span data-crumb="parent">Sistema Solare</span>
             <span class="crumb-sep">/</span>
-            <span class="crumb-root">Milky Way</span>
+            <span class="crumb-root">Via Lattea</span>
           </div>
         </div>
       </div>
@@ -91,48 +91,48 @@
         <div class="search-field">
           <svg class="icon icon-search" aria-hidden="true"><use href="#i-search"/></svg>
           <input id="search-input" type="search" autocomplete="off" spellcheck="false"
-                 placeholder="Search planets, stars, galaxies…" aria-label="Search the cosmos"
+                 placeholder="Cerca pianeti, stelle, galassie…" aria-label="Cerca nel cosmo"
                  role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" />
           <kbd class="search-kbd">/</kbd>
-          <button class="search-mobile-close icon-button" id="search-mobile-close" type="button" aria-label="Close search" hidden>
+          <button class="search-mobile-close icon-button" id="search-mobile-close" type="button" aria-label="Chiudi la ricerca" hidden>
             <svg class="icon"><use href="#i-close"/></svg>
           </button>
         </div>
-        <div class="search-results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+        <div class="search-results" id="search-results" role="listbox" aria-label="Risultati della ricerca" hidden></div>
       </div>
 
       <div class="top-actions">
         <div class="mode-menu-wrap">
           <button class="mode-button" id="mode-button" type="button" aria-haspopup="menu" aria-expanded="false">
             <span class="mode-dot"></span>
-            <span id="mode-label">Explore</span>
+            <span id="mode-label">Esplora</span>
             <svg class="icon icon-chevron"><use href="#i-chevron-down"/></svg>
           </button>
           <div class="menu-panel mode-menu" id="mode-menu" role="menu" hidden>
-            <button role="menuitemradio" data-mode="explore" aria-checked="true"><span>Explore</span><small>Free navigation</small></button>
-            <button role="menuitemradio" data-mode="atlas"><span>Atlas</span><small>Labels, grid, coordinates</small></button>
-            <button role="menuitemradio" data-mode="simulation"><span>Simulation</span><small>Time and orbital motion</small></button>
-            <button role="menuitemradio" data-mode="cinematic"><span>Cinematic</span><small>Minimal, immersive</small></button>
-            <button role="menuitemradio" data-mode="education"><span>Education</span><small>Scale context</small></button>
-            <button role="menuitemradio" data-mode="comparison"><span>Comparison</span><small>Compare two objects</small></button>
+            <button role="menuitemradio" data-mode="explore" aria-checked="true"><span>Esplora</span><small>Navigazione libera</small></button>
+            <button role="menuitemradio" data-mode="atlas"><span>Atlante</span><small>Etichette, griglia, coordinate</small></button>
+            <button role="menuitemradio" data-mode="simulation"><span>Simulazione</span><small>Tempo e moto orbitale</small></button>
+            <button role="menuitemradio" data-mode="cinematic"><span>Cinematico</span><small>Minimale, immersivo</small></button>
+            <button role="menuitemradio" data-mode="education"><span>Didattica</span><small>Contesto delle scale</small></button>
+            <button role="menuitemradio" data-mode="comparison"><span>Confronto</span><small>Confronta due oggetti</small></button>
           </div>
         </div>
-        <button class="icon-button top-action" id="layers-button" type="button" aria-label="Data layers" title="Data layers">
+        <button class="icon-button top-action" id="layers-button" type="button" aria-label="Livelli di dati" title="Livelli di dati">
           <svg class="icon"><use href="#i-layers"/></svg>
         </button>
-        <button class="icon-button top-action" id="settings-button" type="button" aria-label="Settings" title="Settings">
+        <button class="icon-button top-action" id="settings-button" type="button" aria-label="Impostazioni" title="Impostazioni">
           <svg class="icon"><use href="#i-settings"/></svg>
         </button>
-        <button class="icon-button top-action" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Fullscreen">
+        <button class="icon-button top-action" id="fullscreen-button" type="button" aria-label="Attiva schermo intero" title="Schermo intero">
           <svg class="icon"><use href="#i-expand"/></svg>
         </button>
       </div>
     </header>
 
-    <aside class="scale-rail" id="scale-rail" aria-label="Cosmic scale">
+    <aside class="scale-rail" id="scale-rail" aria-label="Scala cosmica">
       <div class="scale-head">
-        <span class="eyebrow">Cosmic scale</span>
-        <button class="scale-collapse icon-button" id="scale-collapse" type="button" aria-label="Collapse scale navigator" aria-expanded="true">
+        <span class="eyebrow">Scala cosmica</span>
+        <button class="scale-collapse icon-button" id="scale-collapse" type="button" aria-label="Comprimi il navigatore di scala" aria-expanded="true">
           <svg class="icon"><use href="#i-chevron-left"/></svg>
         </button>
       </div>
@@ -143,24 +143,24 @@
           <div class="scale-thumb" id="scale-thumb" aria-hidden="true"></div>
           <div class="scale-stops" id="scale-stops"></div>
           <input class="scale-range" id="scale-range" type="range" min="6" max="27" step="0.01"
-                 aria-label="Logarithmic cosmic scale" aria-valuetext="Earth" />
+                 aria-label="Scala cosmica logaritmica" aria-valuetext="Terra" />
         </div>
         <div class="scale-readout">
           <span class="mono" id="scale-value">10<sup>7</sup> m</span>
-          <span class="scale-caption" id="scale-caption">Earth</span>
+          <span class="scale-caption" id="scale-caption">Terra</span>
         </div>
       </div>
-      <button class="scale-open icon-button" id="scale-open" type="button" aria-label="Open scale navigator" hidden>
+      <button class="scale-open icon-button" id="scale-open" type="button" aria-label="Apri il navigatore di scala" hidden>
         <svg class="icon"><use href="#i-compass"/></svg>
       </button>
     </aside>
 
     <div class="labels" id="labels-layer" aria-live="off"></div>
 
-    <aside class="inspector" id="inspector" aria-label="Object information" aria-hidden="true">
+    <aside class="inspector" id="inspector" aria-label="Informazioni sull’oggetto" aria-hidden="true">
       <div class="inspector-top">
-        <span class="eyebrow" id="inspector-kicker">Object</span>
-        <button class="icon-button inspector-close" id="inspector-close" type="button" aria-label="Close information panel">
+        <span class="eyebrow" id="inspector-kicker">Oggetto</span>
+        <button class="icon-button inspector-close" id="inspector-close" type="button" aria-label="Chiudi il pannello informazioni">
           <svg class="icon"><use href="#i-close"/></svg>
         </button>
       </div>
@@ -168,8 +168,8 @@
         <div class="object-head">
           <div class="object-preview" id="object-preview" aria-hidden="true"></div>
           <div class="object-heading">
-            <h2 class="object-title" id="object-name">Earth</h2>
-            <div class="object-subtitle" id="object-subtitle">Terrestrial planet · Solar System</div>
+            <h2 class="object-title" id="object-name">Terra</h2>
+            <div class="object-subtitle" id="object-subtitle">Pianeta terrestre · Sistema Solare</div>
           </div>
         </div>
         <p class="object-description" id="object-description"></p>
@@ -177,11 +177,11 @@
         <div class="section-rule"></div>
         <div class="facts" id="object-facts"></div>
         <div id="object-atmosphere-wrap" class="atmosphere-block" hidden>
-          <div class="eyebrow">Atmospheric composition</div>
+          <div class="eyebrow">Composizione atmosferica</div>
           <div class="chips" id="object-atmosphere"></div>
         </div>
         <div id="object-system-wrap" class="system-block" hidden>
-          <div class="eyebrow">Confirmed planetary system</div>
+          <div class="eyebrow">Sistema planetario confermato</div>
           <div class="planet-list" id="object-system"></div>
         </div>
         <div class="actions" id="object-actions"></div>
@@ -191,83 +191,83 @@
 
     <button class="exo-return" id="exo-return" type="button" hidden>
       <svg class="icon"><use href="#i-arrow-left"/></svg>
-      <span>Back to stellar atlas</span>
+      <span>Torna all’atlante stellare</span>
     </button>
 
     <div class="telemetry" id="telemetry" aria-live="polite">
       <div class="telemetry-head">
         <span class="status-dot"></span>
-        <span class="eyebrow" id="telemetry-title">Observer</span>
-        <span class="mono telemetry-mode" id="telemetry-mode">Earth orbit</span>
+        <span class="eyebrow" id="telemetry-title">Osservatore</span>
+        <span class="mono telemetry-mode" id="telemetry-mode">Orbita terrestre</span>
       </div>
       <div class="telemetry-lines" id="telemetry-lines">
         <div><span class="telemetry-key">Lat</span><span class="mono" id="tel-lat">—</span><span class="telemetry-key">Lon</span><span class="mono" id="tel-lon">—</span></div>
-        <div><span class="telemetry-key">Alt</span><span class="mono" id="tel-alt">—</span><span class="telemetry-key">Sun</span><span class="mono" id="tel-sun">—</span></div>
-        <div class="telemetry-extra" id="tel-extra">Move across the globe to read coordinates</div>
+        <div><span class="telemetry-key">Alt</span><span class="mono" id="tel-alt">—</span><span class="telemetry-key">Sole</span><span class="mono" id="tel-sun">—</span></div>
+        <div class="telemetry-extra" id="tel-extra">Muoviti sul globo per leggere le coordinate</div>
       </div>
     </div>
 
     <div class="bottom-dock">
       <div class="tour-card" id="tour-card" hidden>
-        <div class="tour-meta"><span class="eyebrow" id="tour-number">Journey 01</span><span class="tour-progress-text mono" id="tour-progress-text">1 / 6</span></div>
-        <h3 id="tour-title">Our Solar System</h3>
+        <div class="tour-meta"><span class="eyebrow" id="tour-number">Percorso 01</span><span class="tour-progress-text mono" id="tour-progress-text">1 / 6</span></div>
+        <h3 id="tour-title">Il nostro Sistema Solare</h3>
         <p id="tour-text"></p>
         <div class="tour-progress"><span id="tour-progress-bar"></span></div>
         <div class="tour-actions">
-          <button class="text-button" id="tour-prev" type="button">Previous</button>
-          <button class="text-button" id="tour-next" type="button">Next</button>
-          <button class="text-button muted" id="tour-exit" type="button">Exit journey</button>
+          <button class="text-button" id="tour-prev" type="button">Precedente</button>
+          <button class="text-button" id="tour-next" type="button">Avanti</button>
+          <button class="text-button muted" id="tour-exit" type="button">Esci dal percorso</button>
         </div>
       </div>
 
       <div class="time-dock" id="time-dock">
-        <button class="icon-button time-play" id="time-play" type="button" aria-label="Pause simulation" title="Play / pause">
+        <button class="icon-button time-play" id="time-play" type="button" aria-label="Metti in pausa la simulazione" title="Riproduci / pausa">
           <svg class="icon"><use href="#i-pause"/></svg>
         </button>
-        <button class="icon-button time-reverse" id="time-reverse" type="button" aria-label="Reverse time" title="Reverse time">
+        <button class="icon-button time-reverse" id="time-reverse" type="button" aria-label="Inverti il tempo" title="Inverti il tempo">
           <svg class="icon"><use href="#i-rewind"/></svg>
         </button>
-        <button class="time-date" id="time-date" type="button" aria-label="Open time controls" aria-expanded="false">
+        <button class="time-date" id="time-date" type="button" aria-label="Apri i controlli del tempo" aria-expanded="false">
           <span class="mono" id="time-date-value">—</span>
         </button>
-        <button class="time-speed mono" id="time-speed" type="button" aria-label="Change simulation speed">100×</button>
+        <button class="time-speed mono" id="time-speed" type="button" aria-label="Cambia la velocità della simulazione">100×</button>
         <div class="time-popover" id="time-popover" hidden>
-          <div class="eyebrow">Simulation time</div>
+          <div class="eyebrow">Tempo di simulazione</div>
           <div class="time-readout mono" id="time-jd">JD —</div>
-          <label class="field-label" for="time-input">Jump to date</label>
+          <label class="field-label" for="time-input">Vai alla data</label>
           <input id="time-input" class="date-input mono" type="date" min="1800-01-01" max="2050-12-31" />
-          <div class="eyebrow speed-label">Rate</div>
+          <div class="eyebrow speed-label">Velocità</div>
           <div class="speed-options" id="speed-options">
             <button data-speed="1">1×</button><button data-speed="10">10×</button><button data-speed="100" class="active">100×</button><button data-speed="1000">1,000×</button><button data-speed="10000">10,000×</button>
           </div>
           <div class="time-actions">
-            <button class="text-button" id="time-now" type="button">Now</button>
-            <button class="text-button muted" id="time-close" type="button">Close</button>
+            <button class="text-button" id="time-now" type="button">Adesso</button>
+            <button class="text-button muted" id="time-close" type="button">Chiudi</button>
           </div>
         </div>
       </div>
 
-      <div class="camera-tools" id="camera-tools" role="toolbar" aria-label="Camera controls">
-        <button class="tool-button active" data-camera="orbit" type="button" aria-label="Orbit camera" aria-pressed="true" title="Orbit">
+      <div class="camera-tools" id="camera-tools" role="toolbar" aria-label="Controlli della camera">
+        <button class="tool-button active" data-camera="orbit" type="button" aria-label="Camera orbitale" aria-pressed="true" title="Orbita">
           <svg class="icon"><use href="#i-orbit"/></svg>
         </button>
-        <button class="tool-button" data-camera="free" type="button" aria-label="Free flight camera" aria-pressed="false" title="Free flight (W A S D / Q E)">
+        <button class="tool-button" data-camera="free" type="button" aria-label="Camera a volo libero" aria-pressed="false" title="Volo libero (W A S D / Q E)">
           <svg class="icon"><use href="#i-fly"/></svg>
         </button>
-        <button class="tool-button" data-camera="follow" type="button" aria-label="Follow selected object" aria-pressed="false" title="Follow selected object">
+        <button class="tool-button" data-camera="follow" type="button" aria-label="Segui l’oggetto selezionato" aria-pressed="false" title="Segui l’oggetto selezionato">
           <svg class="icon"><use href="#i-follow"/></svg>
         </button>
         <span class="tool-sep"></span>
-        <button class="tool-button" id="tour-button" type="button" aria-label="Guided journeys" title="Guided journeys">
+        <button class="tool-button" id="tour-button" type="button" aria-label="Percorsi guidati" title="Percorsi guidati">
           <svg class="icon"><use href="#i-tour"/></svg>
         </button>
-        <button class="tool-button" id="reset-view" type="button" aria-label="Reset view" title="Reset view (R)">
+        <button class="tool-button" id="reset-view" type="button" aria-label="Reimposta la visuale" title="Reimposta la visuale (R)">
           <svg class="icon"><use href="#i-reset"/></svg>
         </button>
       </div>
     </div>
 
-    <div class="status-corner" aria-label="Scale and rendering status">
+    <div class="status-corner" aria-label="Stato di scala e rendering">
       <div class="scale-bar" id="scale-bar">
         <span class="scale-bar-icon"></span>
         <span class="mono" id="status-scale">2.9 R⊕</span>
@@ -277,14 +277,14 @@
         <span class="mono" id="status-fps">— FPS</span>
       </div>
       <div class="status-row muted">
-        <span id="status-quality">Auto quality</span>
+        <span id="status-quality">Qualità automatica</span>
         <span class="mono" id="status-coord">J2000</span>
       </div>
     </div>
 
-    <button class="mobile-scale-button" id="mobile-scale-button" type="button" aria-label="Open cosmic scale">
+    <button class="mobile-scale-button" id="mobile-scale-button" type="button" aria-label="Apri la scala cosmica">
       <svg class="icon"><use href="#i-compass"/></svg>
-      <span>Scale</span>
+      <span>Scala</span>
     </button>
 
     <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>

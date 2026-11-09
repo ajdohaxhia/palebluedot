@@ -173,8 +173,8 @@ export class ExoScene {
     this.system = system;
     this.selectedPlanet = selectedPlanet || system.planets[0] || null;
     this.sky = new SkyDome(
-      this.assets.textures.get('assets/textures/milkyway_starmap_4k.jpg') || this._fallbackSky(),
-      { rotation: galacticSkyRotation(), brightness: 0.24, opacity: 0.55 },
+      this.assets.textures.get('assets/textures/nasa_starmap_2020_4k_bright.jpg') || this._fallbackSky(),
+      { rotation: galacticSkyRotation(), brightness: 1.0, opacity: 0.7 },
     );
     this.scene.add(this.sky.mesh);
     this._buildStar();

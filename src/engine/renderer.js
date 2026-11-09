@@ -72,6 +72,13 @@ export const QUALITY_PRESETS = {
   ultra:    { name: 'Ultra',    pixelRatio: 2.0, bloom: true, bloomStrength: 0.6,  starDetail: 1.15, shadows: true },
 };
 
+/** Heuristic for low-memory or few-core machines, where starting at High would stutter. */
+export function isLowEndDevice() {
+  const cores = navigator.hardwareConcurrency || 8;
+  const memory = navigator.deviceMemory || 8;
+  return cores <= 4 || memory <= 4;
+}
+
 export class Engine {
   constructor(canvas) {
     this.canvas = canvas;
@@ -172,8 +179,8 @@ export class Engine {
     this.qualityName = name;
     this.autoQuality = name === 'auto';
     if (name === 'auto') {
-      this.currentPreset = { ...QUALITY_PRESETS.high };
-      this.dynamicScale = 1;
+      this.currentPreset = { ...QUALITY_PRESETS[isLowEndDevice() ? 'balanced' : 'high'] };
+      this.dynamicScale = isLowEndDevice() ? 0.85 : 1;
       this._qualityCooldown = 2;
     } else {
       this.currentPreset = { ...QUALITY_PRESETS[name] };

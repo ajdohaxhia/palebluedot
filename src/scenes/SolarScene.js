@@ -412,14 +412,14 @@ export class SolarScene {
       mercury, venus, mars, jupiter, saturn, saturnRing, uranus, neptune, moon,
       earthDay, earthNight, earthSpec, earthNormal, earthClouds, sun: sunTex,
     };
-    this.skyTex = this.assets.textures.get('assets/textures/milkyway_starmap_4k.jpg') || null;
+    this.skyTex = this.assets.textures.get('assets/textures/nasa_starmap_2020_4k_bright.jpg') || null;
     if (!this.skyTex) {
-      try { this.skyTex = await this.assets.texture('assets/textures/milkyway_starmap_4k.jpg'); } catch (e) { this.skyTex = this._fallbackSkyTexture(); }
+      try { this.skyTex = await this.assets.texture('assets/textures/nasa_starmap_2020_4k_bright.jpg'); } catch (e) { this.skyTex = this._fallbackSkyTexture(); }
     }
     this.sky = new SkyDome(this.skyTex, {
       rotation: eclipticSkyRotation(OBLIQUITY),
-      brightness: 0.3,
-      opacity: 0.82,
+      brightness: 1.0,
+      opacity: 0.85,
     });
     this.scene.add(this.sky.mesh);
 

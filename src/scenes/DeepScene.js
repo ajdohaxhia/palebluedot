@@ -471,11 +471,11 @@ export class DeepScene {
 
   async init() {
     // Sky background is deliberately faint here; the 3D star field carries the sky.
-    const skyTex = this.assets.textures.get('assets/textures/milkyway_starmap_4k.jpg') || null;
+    const skyTex = this.assets.textures.get('assets/textures/nasa_starmap_2020_4k_bright.jpg') || null;
     this.sky = new SkyDome(skyTex || this._fallbackSkyTexture(), {
       rotation: galacticSkyRotation(),
-      brightness: 0.28,
-      opacity: 0.35,
+      brightness: 1.0,
+      opacity: 0.6,
     });
     this.scene.add(this.sky.mesh);
 

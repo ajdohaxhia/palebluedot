@@ -452,11 +452,23 @@ export class TouchEnhancer {
         else if (next <= rig.minDistance * 1.005) rig._pushLimit('in', pushAmount);
         rig.targetDistance = clamp(next, rig.minDistance, rig.maxDistance);
       }
+      const cx = (a.x + b.x) / 2;
+      const cy = (a.y + b.y) / 2;
+      if (this.lastCenter) {
+        const rig = this.rig;
+        const dx = cx - this.lastCenter.x;
+        const dy = cy - this.lastCenter.y;
+        rig.targetYaw -= dx * 0.0044 * rig.rotateSpeed;
+        rig.targetPitch = clamp(rig.targetPitch - dy * 0.0038 * rig.rotateSpeed, rig.minPitch, rig.maxPitch);
+        rig.autoRotate = false;
+        rig._lastInteraction = performance.now();
+      }
+      this.lastCenter = { x: cx, y: cy };
       this.lastDist = dist;
     }
   }
   onUp(e) {
     this.pointers.delete(e.pointerId);
-    if (this.pointers.size < 2) this.lastDist = 0;
+    if (this.pointers.size < 2) { this.lastDist = 0; this.lastCenter = null; }
   }
 }

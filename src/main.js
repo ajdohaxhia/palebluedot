@@ -112,7 +112,7 @@ async function boot() {
   };
   APP.assets.manager.onError = url => {
     console.warn('Asset failed', url);
-    showToast('One imagery layer could not be loaded. Continuing with available data.', 'warn');
+    showToast('Un livello di immagini non è stato caricato. Continuo con i dati disponibili.', 'warn');
   };
 
   APP.time = new TimeEngine({ speed: 100, playing: true });
@@ -163,7 +163,7 @@ async function boot() {
   clearInterval(APP.loadingInterval);
   setLoading(100, 'Observatory online');
   $('#data-chips').textContent = 'NASA · HYG';
-  $('#status-quality').textContent = 'Auto · adaptive';
+  $('#status-quality').textContent = 'Automatica · adattiva';
 
   setupUI();
   initCosmos();
@@ -200,7 +200,7 @@ function maybeOpenIntro() {
 function showGuidance() {
   setTimeout(() => {
     if (APP.selection) return;
-    showToast('Drag to orbit Earth · scroll to approach · press / to search the cosmos');
+    showToast('Trascina per orbitare attorno alla Terra · scorri per avvicinarti · premi / per cercare nel cosmo');
   }, 2300);
 }
 
@@ -226,7 +226,7 @@ async function loadCataloguesInBackground() {
     console.info(`[EON] catalogue ready: ${APP.catalogs.starIndex.count.toLocaleString()} stars, ${APP.catalogs.exo.count.toLocaleString()} planets, ${APP.catalogs.sdss.count.toLocaleString()} galaxies`);
   } catch (e) {
     console.error('Catalogue load failed', e);
-    showToast('The extended catalogue could not be loaded. Earth and the Solar System remain fully explorable.', 'warn');
+    showToast('Il catalogo esteso non è stato caricato. Terra e Sistema Solare restano esplorabili.', 'warn');
     setupSearch();
   }
 }
@@ -258,7 +258,7 @@ async function createSolarScene() {
   APP.solarPromise = p;
   p.catch(err => {
     console.error('Solar scene failed', err);
-    showToast('The Solar System renderer could not be initialised.', 'error');
+    showToast('Il renderer del Sistema Solare non si è avviato.', 'error');
     APP.solarPromise = null;
   });
   return p;
@@ -277,7 +277,7 @@ async function enterSolar({ targetId = null, distance = null, announce = false }
     if (distance) APP.solar.rig.targetDistance = distance;
     return APP.solar;
   }
-  showToast('Ascending to the Solar System…');
+  showToast('Salita verso il Sistema Solare…');
   const solar = await createSolarScene();
   await runTransition('Solar System', () => {
     activateDomain('solar', solar);
@@ -287,7 +287,7 @@ async function enterSolar({ targetId = null, distance = null, announce = false }
   if (targetId) solar.focusObject(targetId);
   else if (distance) solar.rig.targetDistance = distance;
   else solar.resetView();
-  if (announce) showToast('Solar System — orbital positions use approximate Keplerian elements.');
+  if (announce) showToast('Sistema Solare — le posizioni orbitali usano elementi kepleriani approssimati.');
   return solar;
 }
 
@@ -396,7 +396,7 @@ async function createDeepScene() {
   APP.deepPromise = p;
   p.catch(err => {
     console.error('Deep atlas failed', err);
-    showToast('The deep atlas could not be initialised.', 'error');
+    showToast('L’atlante profondo non si è avviato.', 'error');
     APP.deepPromise = null;
   });
   return p;
@@ -411,10 +411,10 @@ function preloadDeep() {
 
 async function enterDeep({ label = 'Stellar neighbourhood', announce = false } = {}) {
   if (APP.domain === 'deep' && APP.deep) return APP.deep;
-  if (!APP.catalogsReady) showToast('Charting the deep sky…');
+  if (!APP.catalogsReady) showToast('Esplorazione del cielo profondo…');
   const deep = await createDeepScene();
   await runTransition(label, () => activateDomain('deep', deep));
-  if (announce) showToast(label === 'Cosmic web' ? 'Cosmic web — SDSS positions use comoving distances.' : 'Stellar atlas — real positions from the HYG catalogue.');
+  if (announce) showToast(label === 'Cosmic web' ? 'Rete cosmica — le posizioni SDSS usano distanze comoventi.' : 'Atlante stellare — posizioni reali dal catalogo HYG.');
   updateDataChips();
   return deep;
 }
@@ -439,6 +439,9 @@ let cosmosSceneToken = 0;
 
 function setAtlasPicking(enabled) {
   const noop = () => {};
+  for (const scene of [APP.earth, APP.solar, APP.deep, APP.exo]) {
+    if (scene?.rig) scene.rig.noHandoff = enabled;
+  }
   if (APP.earth) APP.earth.onSelect = enabled ? handleSelection : noop;
   if (APP.solar) APP.solar.onSelect = enabled ? handleSolarSelection : noop;
   if (APP.deep) APP.deep.onSelect = enabled ? handleDeepSelection : noop;
@@ -600,20 +603,20 @@ function setupLoading() {
     setLoading(p, 'Initialising observatory');
   }, 260);
   window.addEventListener('eon:webgl-lost', () => {
-    showToast('Graphics context lost. Attempting to recover…', 'warn');
+    showToast('Contesto grafico perso. Tentativo di ripristino…', 'warn');
   });
   window.addEventListener('eon:webgl-restored', () => {
-    showToast('Graphics context restored.');
+    showToast('Contesto grafico ripristinato.');
   });
 }
 
 function loadingLabel(url) {
   if (url.includes('earth_day')) return 'Loading Earth imagery';
-  if (url.includes('earth_night')) return 'Loading city lights';
-  if (url.includes('clouds')) return 'Building cloud layer';
-  if (url.includes('starmap')) return 'Loading the celestial sphere';
-  if (url.includes('normal') || url.includes('specular')) return 'Refining surface materials';
-  return 'Loading observatory assets';
+  if (url.includes('earth_night')) return 'Caricamento delle luci delle città';
+  if (url.includes('clouds')) return 'Costruzione dello strato nuvoloso';
+  if (url.includes('starmap')) return 'Caricamento della sfera celeste';
+  if (url.includes('normal') || url.includes('specular')) return 'Rifinitura dei materiali di superficie';
+  return 'Caricamento delle risorse dell’osservatorio';
 }
 
 function setLoading(percent, text) {
@@ -633,7 +636,7 @@ function showFatal(message, error) {
     el.textContent = message;
   }
   const status = $('#loading-status');
-  if (status) status.textContent = 'Unable to initialise';
+  if (status) status.textContent = 'Impossibile avviare';
   showToast(message, 'error');
 }
 
@@ -846,7 +849,7 @@ function setupTimeControls() {
       APP.time.setPlaying(false);
       APP.time.setDate(d);
       updateTimeUI();
-      showToast(`Simulation date set to ${formatDateUTC(d)}.`);
+      showToast(`Data di simulazione impostata al ${formatDateUTC(d)}.`);
     }
   });
   nowBtn.addEventListener('click', () => {
@@ -908,7 +911,7 @@ function setupSettings() {
     APP.engine.setQuality(quality.value);
     $('#status-quality').textContent =
       quality.value === 'auto' ? 'Auto · adaptive' : (QUALITY_PRESETS[quality.value]?.name || quality.value);
-    showToast(`Render quality: ${quality.options[quality.selectedIndex].text}.`);
+    showToast(`Qualità di resa: ${quality.options[quality.selectedIndex].text}.`);
   });
   const bloom = $('#bloom-range');
   bloom.addEventListener('input', () => {
@@ -925,7 +928,7 @@ function setupSettings() {
     document.body.classList.toggle('reduced-motion', reduced.checked);
     if (reduced.checked) {
       APP.earth?.rig.setAutoRotate(false);
-      showToast('Reduced motion enabled — cinematic camera motion is limited.', 'warn');
+      showToast('Movimento ridotto attivo — il movimento cinematografico della camera è limitato.', 'warn');
     }
   });
   $('#labels-toggle').addEventListener('change', e => {
@@ -967,9 +970,9 @@ function setupSettings() {
     APP.settings.solarScale = e.target.value;
     APP.solar?.setScaleMode(e.target.value);
     if (e.target.value === 'educational') {
-      showToast('Enhanced visibility — body sizes and moon orbits ×30, interplanetary distances true.');
+      showToast('Visibilità migliorata — dimensioni dei corpi e orbite lunari ×30, distanze interplanetarie reali.');
     } else {
-      showToast('True scale — physical radii and distances.');
+      showToast('Scala reale — raggi e distanze fisiche.');
     }
     if (APP.mode === 'education') showContextNote();
   });
@@ -1011,17 +1014,17 @@ function setupCameraTools() {
         rig.autoRotate = false;
         rig.follow = null;
         setActive('free');
-        showToast('Free flight — drag to look, W A S D to move, Q E vertically, Shift to accelerate.');
+        showToast('Volo libero — trascina per guardare, W A S D per muoverti, Q E in verticale, Maiusc per accelerare.');
       } else if (mode === 'follow') {
         if (!APP.selection) {
-          showToast('Select an object first, then choose Follow.', 'warn');
+          showToast('Seleziona prima un oggetto, poi scegli Segui.', 'warn');
           return;
         }
         rig.setFreeFlight(false);
         if (APP.domain === 'solar') {
           if (APP.solar.setFollow(APP.selection.id)) {
             setActive('follow');
-            showToast(`Following ${APP.selection.name || APP.selection.id}.`);
+            showToast(`Seguendo ${APP.selection.name || APP.selection.id}.`);
           } else {
             showToast('This object cannot be followed.', 'warn');
           }
@@ -1034,7 +1037,7 @@ function setupCameraTools() {
           if (APP.selection.kind === 'exoplanet') {
             APP.exo.focusPlanet(APP.selection.id);
             setActive('follow');
-            showToast(`Following ${APP.selection.id}.`);
+            showToast(`Seguendo ${APP.selection.id}.`);
           } else {
             showToast('Select a planet to follow.', 'warn');
           }
@@ -1043,7 +1046,7 @@ function setupCameraTools() {
           if (p) {
             rig.follow = () => new THREE.Vector3(p.x, p.y, p.z);
             setActive('follow');
-            showToast(`Following ${APP.selection.data?.name || APP.selection.id}.`);
+            showToast(`Seguendo ${APP.selection.data?.name || APP.selection.id}.`);
           } else {
             showToast('This object cannot be followed.', 'warn');
           }
@@ -1054,7 +1057,7 @@ function setupCameraTools() {
         rig.autoRotateSpeed = APP.domain === 'earth' ? 0.018 : 0.01;
         b.classList.toggle('active', rig.autoRotate);
         b.setAttribute('aria-pressed', String(rig.autoRotate));
-        showToast(rig.autoRotate ? 'Cinematic drift enabled.' : 'Cinematic drift disabled.');
+        showToast(rig.autoRotate ? 'Deriva cinematografica attiva.' : 'Deriva cinematografica disattivata.');
         if (!rig.autoRotate) setActive('orbit');
         return;
       }
@@ -1092,7 +1095,7 @@ function setupScaleRail() {
   $('#scale-collapse').addEventListener('click', () => toggleScaleRail(false));
   $('#mobile-scale-button').addEventListener('click', () => {
     toggleScaleRail(true);
-    showToast('Cosmic scale — drag through the layers of the universe.');
+    showToast('Scala cosmica — trascina attraverso gli strati dell’universo.');
   });
   $('#scale-open').addEventListener('click', () => toggleScaleRail(true));
 }
@@ -2192,7 +2195,7 @@ async function navigateToScale(log) {
 /* Continuous zoom: scrolling past a scene's zoom limit moves to the next scale. */
 function setupZoomHandoffs() {
   window.addEventListener('cosmos:zoomlimit', (ev) => {
-    if (!APP.ready || APP.transitioning || APP.tour) return;
+    if (!APP.ready || APP.transitioning || APP.tour || APP.cosmos?.freeAtlas) return;
     const { dir, rig } = ev.detail || {};
     if (!rig) return;
     if (dir === 'out') {

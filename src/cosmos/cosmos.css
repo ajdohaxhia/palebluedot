@@ -196,7 +196,7 @@ body.cosmos-mode { background: #03060a; overflow: hidden; }
     radial-gradient(circle at 75% 30%, rgba(56, 189, 248, 0.16), transparent 50%),
     radial-gradient(circle at 20% 70%, rgba(245, 158, 11, 0.12), transparent 45%),
     linear-gradient(135deg, rgba(3,6,10,0.98) 0%, rgba(3,6,10,0.85) 45%, rgba(3,6,10,0.55) 100%),
-    url("../../assets/textures/milkyway_starmap_4k.jpg") center/cover no-repeat;
+    url("../../assets/textures/nasa_starmap_2020_4k_bright.jpg") center/cover no-repeat;
   opacity: .95;
 }
 .cs-landing-particles {
