@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/Presentazione Geografia astronomica UDA 2 e 3.pptx",
+  "sourceSha256": "84c3e2b3f31c15481121af373e21a06943a48fc3e09d676b2156fd6180e1141e",
+  "dpi": 144,
+  "pageCount": 32,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0001.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 1518418
+    },
+    {
+      "index": 2,
+      "page": 2,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0002.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 117988
+    },
+    {
+      "index": 3,
+      "page": 3,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0003.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 2003849
+    },
+    {
+      "index": 4,
+      "page": 4,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0004.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 831893
+    },
+    {
+      "index": 5,
+      "page": 5,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0005.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 638175
+    },
+    {
+      "index": 6,
+      "page": 6,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0006.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 1178228
+    },
+    {
+      "index": 7,
+      "page": 7,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0007.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 806004
+    },
+    {
+      "index": 8,
+      "page": 8,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0008.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 565311
+    },
+    {
+      "index": 9,
+      "page": 9,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0009.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 611023
+    },
+    {
+      "index": 10,
+      "page": 10,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0010.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 634475
+    },
+    {
+      "index": 11,
+      "page": 11,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0011.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 1270970
+    },
+    {
+      "index": 12,
+      "page": 12,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0012.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 921980
+    },
+    {
+      "index": 13,
+      "page": 13,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0013.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 613500
+    },
+    {
+      "index": 14,
+      "page": 14,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0014.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 160595
+    },
+    {
+      "index": 15,
+      "page": 15,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0015.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 743569
+    },
+    {
+      "index": 16,
+      "page": 16,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0016.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 726677
+    },
+    {
+      "index": 17,
+      "page": 17,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0017.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 689375
+    },
+    {
+      "index": 18,
+      "page": 18,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0018.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 2079954
+    },
+    {
+      "index": 19,
+      "page": 19,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0019.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 739924
+    },
+    {
+      "index": 20,
+      "page": 20,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0020.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 1412369
+    },
+    {
+      "index": 21,
+      "page": 21,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0021.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 312468
+    },
+    {
+      "index": 22,
+      "page": 22,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0022.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 2192439
+    },
+    {
+      "index": 23,
+      "page": 23,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0023.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 367260
+    },
+    {
+      "index": 24,
+      "page": 24,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0024.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 438912
+    },
+    {
+      "index": 25,
+      "page": 25,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0025.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 197827
+    },
+    {
+      "index": 26,
+      "page": 26,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0026.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 453001
+    },
+    {
+      "index": 27,
+      "page": 27,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0027.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 788922
+    },
+    {
+      "index": 28,
+      "page": 28,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0028.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 116325
+    },
+    {
+      "index": 29,
+      "page": 29,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0029.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 693002
+    },
+    {
+      "index": 30,
+      "page": 30,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0030.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 195838
+    },
+    {
+      "index": 31,
+      "page": 31,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0031.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 254167
+    },
+    {
+      "index": 32,
+      "page": 32,
+      "path": "/Users/ade/Documents/deepseek-harness/default-workspace/eon/source/slides_render/page-0032.png",
+      "width": 1441,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 960.0666666666667,
+        "height": 720.0666666666667
+      },
+      "byteLength": 320663
+    }
+  ],
+  "missingFonts": []
+}

@@ -1,0 +1,1481 @@
+[
+  {
+    "slide": 1,
+    "texts": [
+      {
+        "name": "Google Shape;130060;p1",
+        "text": "Pale Blue Dot",
+        "left": 4.61,
+        "top": 4.82,
+        "width": 1.09,
+        "height": 0.27,
+        "font_sizes": [
+          10.0
+        ]
+      },
+      {
+        "name": "Google Shape;130061;p1",
+        "text": "Voyager 1 (1990)",
+        "left": 0.43,
+        "top": 0.44,
+        "width": 2.19,
+        "height": 0.4,
+        "font_sizes": [
+          18.0
+        ]
+      }
+    ],
+    "notes": [
+      "Nel 1990 la sonda spaziale Vojager 1 - lanciata nel 1977 da Cape Canaveral, Florida, costruita dal Jet Propulsion Laboratory - ha scattato questa foto alla Terra quando si trovava ad oltre 6 miliardi di chilometri da quest’ultima (40 UA circa, oltre l’orbita di Nettuno). Questa celebre foto è la pale blue dot (pallido puntino blu) che mostra la Terra della dimensione di meno di un pixel (0,12 pixel). Nel 2001 tale foto è stata definita come una delle dieci migliori immagini scientifiche dello spazio di tutti i tempi. La Vojager 1 è l’oggetto costruito dall’uomo più lontano dalla Terra. Oggi procede alla velocità di circa 61.000 km/h e percorrerà la distanza di 1 anno luce fra 17.700 anni. Tra 30 000 anni raggiungerà la nube di Oort."
+    ],
+    "images": [
+      {
+        "name": "Google Shape;130058;p1",
+        "ext": "png",
+        "size": [
+          442,
+          599
+        ],
+        "bytes": 547156,
+        "left": 2.6,
+        "top": 0.13,
+        "width": 5.32,
+        "height": 7.21
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 2,
+    "texts": [
+      {
+        "name": "Text Box 5",
+        "text": "150 milioni di km",
+        "left": 4.06,
+        "top": 6.35,
+        "width": 2.16,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Rectangle 6",
+        "text": "Unità astronomica (UA)",
+        "left": 0.59,
+        "top": 0.36,
+        "width": 9.0,
+        "height": 1.25,
+        "font_sizes": [
+          44.0
+        ]
+      }
+    ],
+    "notes": [
+      "L’unità astronomica (UA, au) corrisponde alla distanza media tra la Terra e il Sole ed equivale a circa 150 milioni di km. È un’unità di lunghezza utilizzata per la misurazione delle distanze tra oggetti celesti all’interno del Sistema solare."
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          500,
+          400
+        ],
+        "bytes": 35593,
+        "left": 1.14,
+        "top": 1.23,
+        "width": 7.56,
+        "height": 6.05
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 3,
+    "texts": [
+      {
+        "name": "CasellaDiTesto 9",
+        "text": "1 UA",
+        "left": 1.3,
+        "top": 7.13,
+        "width": 0.78,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "CasellaDiTesto 10",
+        "text": "40 UA",
+        "left": 8.95,
+        "top": 7.14,
+        "width": 0.92,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "CasellaDiTesto 11",
+        "text": "PIANETI INTERNI",
+        "left": 8.23,
+        "top": 3.22,
+        "width": 1.82,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "CasellaDiTesto 12",
+        "text": "PIANETI ESTERNI",
+        "left": 8.23,
+        "top": 3.59,
+        "width": 2.36,
+        "height": 0.57,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "CasellaDiTesto 13",
+        "text": "Parte del SISTEMA SOLARE",
+        "left": 3.11,
+        "top": 0.52,
+        "width": 3.86,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Velocità di rotazione lineare terrestre in Italia: 1240 km/h",
+      "Velocità di rivoluzione terrestre: circa 100 000 km/h, circa in media 30 km/s",
+      "Velocità rivoluzione del Sole: 720 000 km/h (secondo l’Università di Stanford)",
+      "Velocità di recessione della Via Lattea: 600 km/s (probabilmente)"
+    ],
+    "images": [
+      {
+        "name": "Picture 16",
+        "ext": "jpg",
+        "size": [
+          1600,
+          1116
+        ],
+        "bytes": 1533355,
+        "left": 0.04,
+        "top": 0.42,
+        "width": 9.96,
+        "height": 6.95
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 4,
+    "texts": [
+      {
+        "name": "Text Box 6",
+        "text": "0,4 UA",
+        "left": 2.61,
+        "top": 3.27,
+        "width": 0.81,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 8",
+        "text": "5 UA",
+        "left": 1.2,
+        "top": 6.43,
+        "width": 0.65,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 10",
+        "text": "1 UA: circa 150 milioni di km",
+        "left": 3.99,
+        "top": 2.68,
+        "width": 2.86,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 12",
+        "text": "30 UA",
+        "left": 1.3,
+        "top": 2.07,
+        "width": 0.76,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "9,5 UA",
+        "left": 6.73,
+        "top": 5.46,
+        "width": 0.81,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "1,5 UA",
+        "left": 3.5,
+        "top": 3.9,
+        "width": 0.81,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "0,7 UA",
+        "left": 2.03,
+        "top": 3.78,
+        "width": 0.81,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "19 UA",
+        "left": 5.6,
+        "top": 1.0,
+        "width": 0.76,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "39 UA: circa 6 miliardi di km",
+        "left": 0.11,
+        "top": 2.45,
+        "width": 2.82,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          505,
+          395
+        ],
+        "bytes": 322241,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.0,
+        "height": 7.82
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 5,
+    "texts": [
+      {
+        "name": "CasellaDiTesto 7",
+        "text": "20 mila – 100 mila UA\n0.3 – 1,5 al dal Sole",
+        "left": 1.16,
+        "top": 4.46,
+        "width": 2.49,
+        "height": 0.64,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "CasellaDiTesto 8",
+        "text": "30 – 50 UA dal Sole",
+        "left": 1.44,
+        "top": 2.25,
+        "width": 2.25,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 6",
+        "ext": "jpg",
+        "size": [
+          500,
+          429
+        ],
+        "bytes": 171998,
+        "left": 1.06,
+        "top": 0.21,
+        "width": 8.19,
+        "height": 7.03
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 6,
+    "texts": [
+      {
+        "name": "Text Box 6",
+        "text": "Terra ripresa dall’Apollo 17 (1972)",
+        "left": 0.17,
+        "top": 0.15,
+        "width": 3.98,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 8",
+        "text": "Diametro equatoriale: poco meno di 13 mila km",
+        "left": 2.24,
+        "top": 6.51,
+        "width": 5.51,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Undicesima ed ultima missione Apollo 17 (1972)",
+      "Programma Apollo (1961-1972): 12 uomini camminano sul nostro satellite naturale",
+      "1959 – foto terra Orbiter 6 (USA) nella sua interezza"
+    ],
+    "images": [
+      {
+        "name": "Picture 5",
+        "ext": "png",
+        "size": [
+          599,
+          599
+        ],
+        "bytes": 540412,
+        "left": 1.93,
+        "top": 0.36,
+        "width": 6.24,
+        "height": 6.24
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 7,
+    "texts": [],
+    "notes": [
+      "16 luglio 1969 – Lancio Apollo 11 da Cape Canaveral (Florida)",
+      "20 luglio 1969 - Arrivo in orbita intorno alla Luna",
+      "21 luglio 1969 - Allunaggio (Mare della Tranquillità) di Armstrong e Aldrin",
+      "24 luglio 1969 - Ammarraggio nell’Oceano Pacifico (ritorno sulla Terra)"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          631,
+          600
+        ],
+        "bytes": 385804,
+        "left": 1.38,
+        "top": 0.43,
+        "width": 7.44,
+        "height": 7.07
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 8,
+    "texts": [
+      {
+        "name": "Rectangle 5",
+        "text": "Foto scattata dalla navicella MESSENGER della NASA",
+        "left": 0.0,
+        "top": 7.17,
+        "width": 5.24,
+        "height": 0.33,
+        "font_sizes": [
+          14.0
+        ]
+      }
+    ],
+    "notes": [
+      "Terra e Luna riprese da una distanza di 183 milioni di km"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          600,
+          450
+        ],
+        "bytes": 183021,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.28,
+        "height": 7.71
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 9,
+    "texts": [
+      {
+        "name": "Text Box 7",
+        "text": "200 000 UA - 30 000 miliardi di km (Il confine ?)",
+        "left": 3.31,
+        "top": 6.62,
+        "width": 5.52,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 13",
+        "text": "168 UA (2025)",
+        "left": 1.87,
+        "top": 2.0,
+        "width": 1.46,
+        "height": 0.34,
+        "font_sizes": [
+          14.0
+        ]
+      }
+    ],
+    "notes": [
+      "Tre confini considerabili dagli astronomi (1) la fascia di Kuiper (caratterizzata da asteroidi e pianeti nani, compreso Plutone tra 30 e 50 UA); (2) L’eliopausa (dove finisce l’influenza del vento solare) che varia dalle 80 alle 100 UA e oltre la quale il plasma non è di origine solare (superata nel 2012 dalla Voyager I); (3) la nube di Oort (dove finisce veramente l’influenza gravitazionale del Sole, reale confine se consideriamo il sistema solare come il Sole e i corpi che gli girano intorno: 0,3 – 1,5 al dal Sole. La NASA e gli astronomi preferiscono l’eliopausa."
+    ],
+    "images": [
+      {
+        "name": "Picture 5",
+        "ext": "png",
+        "size": [
+          758,
+          755
+        ],
+        "bytes": 438045,
+        "left": 0.27,
+        "top": 0.0,
+        "width": 11.18,
+        "height": 9.8
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 10,
+    "texts": [],
+    "notes": [
+      "Sulle sonde Pioneer 10 (lancio: 1972) e Pioneer11 (lancio: 1973) attualmente rispettivamente a 120 UA  e 104 UA dalla Terra (lanciate da Cape Canaveral e costruite dal Jet Propulsion Laboratory"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          800,
+          493
+        ],
+        "bytes": 293442,
+        "left": 0.0,
+        "top": 0.82,
+        "width": 10.0,
+        "height": 6.16
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 11,
+    "texts": [],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          757,
+          600
+        ],
+        "bytes": 630869,
+        "left": 1.06,
+        "top": 0.62,
+        "width": 7.89,
+        "height": 6.25
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 12,
+    "texts": [
+      {
+        "name": "Rectangle 2",
+        "text": "Anno luce (al)",
+        "left": 4.06,
+        "top": 4.77,
+        "width": 6.69,
+        "height": 1.25,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "L’anno luce (al) corrisponde alla distanza percorsa nel vuoto dalla luce in un anno. Equivale a circa 9 500 miliardi di km ed è una unità di lunghezza per la misura di distanze tra oggetti celesti al di fuori del Sistema solare (esempio tra stelle).",
+      "1 UA corrisponde a 8,2 minuti luce. \u000bLa luce impiega circa 1,28 secondi per percorrere la distanza che separa la Terra dalla Luna.",
+      "In una scala in cui la Terra avesse un diametro di 1 cm, un anno luce corrisponderebbe ad una distanza di 7.423,80 chilometri.",
+      "La luce impiega poco più di 8 minuti per viaggiare dal Sole alla Terra.",
+      "Un'ora luce corrisponde a circa 1,08 miliardi di chilometri (circa la distanza tra il Sole e Saturno)."
+    ],
+    "images": [
+      {
+        "name": "Picture 5",
+        "ext": "png",
+        "size": [
+          600,
+          450
+        ],
+        "bytes": 363739,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.04,
+        "height": 7.53
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 13,
+    "texts": [
+      {
+        "name": "Text Box 7",
+        "text": "3 al",
+        "left": 4.13,
+        "top": 6.51,
+        "width": 0.62,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          758,
+          755
+        ],
+        "bytes": 438045,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.0,
+        "height": 9.8
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 14,
+    "texts": [
+      {
+        "name": "Text Box 9",
+        "text": "4,2 al",
+        "left": 4.53,
+        "top": 4.06,
+        "width": 0.83,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 11",
+        "text": "8,6 al",
+        "left": 3.19,
+        "top": 3.99,
+        "width": 0.83,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Alpha centauri – stella tripla nana gialla + nana arancione  + nana  rossa",
+      "Sirio – stella nana bianca"
+    ],
+    "images": [
+      {
+        "name": "Picture 7",
+        "ext": "png",
+        "size": [
+          188,
+          158
+        ],
+        "bytes": 40043,
+        "left": 0.43,
+        "top": 0.0,
+        "width": 8.7,
+        "height": 7.31
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 15,
+    "texts": [
+      {
+        "name": "Text Box 6",
+        "text": "65 al",
+        "left": 3.98,
+        "top": 2.41,
+        "width": 0.7,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 6",
+        "text": "100 al",
+        "left": 4.32,
+        "top": 0.76,
+        "width": 0.9,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Aldebaran – gigante rossa"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          775,
+          744
+        ],
+        "bytes": 477069,
+        "left": 0.91,
+        "top": 0.0,
+        "width": 8.5,
+        "height": 8.16
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 16,
+    "texts": [
+      {
+        "name": "Text Box 18",
+        "text": "100 mila al",
+        "left": 4.37,
+        "top": 0.91,
+        "width": 1.47,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 19",
+        "text": "5 mila al",
+        "left": 0.75,
+        "top": 3.51,
+        "width": 1.19,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          1239,
+          645
+        ],
+        "bytes": 469521,
+        "left": -1.61,
+        "top": 0.36,
+        "width": 12.91,
+        "height": 6.72
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 17,
+    "texts": [
+      {
+        "name": "Text Box 6",
+        "text": "10 milioni al",
+        "left": 4.06,
+        "top": 6.9,
+        "width": 1.63,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Il Gruppo Locale è il nome proprio dato al gruppo di galassie di cui fa parte la nostra galassia, la Via Lattea. Il Gruppo Locale comprende più di 50 galassie. Le galassie del Gruppo Locale si estendono su uno spazio di 10 milioni di anni luce di diametro. Le galassie sono come isole lontane tra loro milioni di anni luce. Le due Nubi di Magellano sono due piccole galassie visibili nell’emisfero australe che orbitano intorno alla Via Lattea. Andromeda è la galassia più grande."
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          772,
+          773
+        ],
+        "bytes": 406824,
+        "left": 0.98,
+        "top": -0.03,
+        "width": 8.04,
+        "height": 7.53
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 18,
+    "texts": [
+      {
+        "name": "Text Box 7",
+        "text": "157 mila al",
+        "left": 0.2,
+        "top": 3.65,
+        "width": 1.18,
+        "height": 0.33,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 8",
+        "text": "200 mila al",
+        "left": 8.82,
+        "top": 3.75,
+        "width": 1.18,
+        "height": 0.33,
+        "font_sizes": [
+          14.0
+        ]
+      },
+      {
+        "name": "Text Box 9",
+        "text": "2,2 milioni di al",
+        "left": 5.94,
+        "top": 0.42,
+        "width": 1.59,
+        "height": 0.33,
+        "font_sizes": [
+          14.0
+        ]
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          768,
+          512
+        ],
+        "bytes": 584665,
+        "left": 0.0,
+        "top": 3.43,
+        "width": 6.1,
+        "height": 4.07
+      },
+      {
+        "name": "Picture 5",
+        "ext": "png",
+        "size": [
+          774,
+          571
+        ],
+        "bytes": 342025,
+        "left": 4.46,
+        "top": 3.41,
+        "width": 5.54,
+        "height": 4.09
+      },
+      {
+        "name": "Picture 6",
+        "ext": "png",
+        "size": [
+          800,
+          526
+        ],
+        "bytes": 894025,
+        "left": 2.09,
+        "top": 0.0,
+        "width": 6.1,
+        "height": 4.01
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 19,
+    "texts": [
+      {
+        "name": "Text Box 7",
+        "text": "200 milioni al",
+        "left": 4.06,
+        "top": 6.94,
+        "width": 1.77,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Superammasso della Vergine. Ha la forma di un disco appiattito, con un diametro di circa 200 milioni di anni luce. Contiene circa 100 tra gruppi e ammassi di galassie. L’ammasso della Vergine contiene a differenza del gruppo locale 2500 galassie. Le galassie in media sono distanti tra loro 2-3 milioni di anni luce."
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          753,
+          768
+        ],
+        "bytes": 472809,
+        "left": 0.9,
+        "top": -0.02,
+        "width": 8.24,
+        "height": 7.52
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 20,
+    "texts": [
+      {
+        "name": "Text Box 5",
+        "text": "Orizzonte cosmico: 46,5 miliardi di anni luce",
+        "left": 1.96,
+        "top": 6.9,
+        "width": 5.52,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "Attualmente si stima che l’età dell’Universo osservabile sia 13,73±0,12 miliardi di anni. la stragrande maggioranza della comunità scientifica del settore è in accordo che l’orizzonte cosmico, ovvero il bordo dell’Universo sia a più 13,7 miliardi di anni luce. Data l’espansione dell’Universo tale orizzonte si estenderebbe a 46,5 miliardi di anni luce"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          771,
+          754
+        ],
+        "bytes": 788447,
+        "left": 0.67,
+        "top": 0.03,
+        "width": 8.66,
+        "height": 7.47
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 21,
+    "texts": [
+      {
+        "name": "Text Box 14",
+        "text": "1000000000000000000000000000000000000000000000000000000000000.. al",
+        "left": 0.35,
+        "top": 6.35,
+        "width": 9.08,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [],
+    "images": [],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 22,
+    "texts": [],
+    "notes": [
+      "Pilastri della creazione nella Nebulosa Aquila a 7000 al da noi. Si sarebbe formato il Sole. Le stelle si formano nelle nebulose."
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          1944,
+          1919
+        ],
+        "bytes": 4160565,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.2,
+        "height": 10.07
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 23,
+    "texts": [],
+    "notes": [
+      "Il sole pesa 2 miliardi di miliardi di tonnellate ed è equivalente a 110 diametri terrestri e come volume a più di 1 milione di volumi terrestri"
+    ],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          633,
+          475
+        ],
+        "bytes": 49776,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.0,
+        "height": 7.5
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 24,
+    "texts": [],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          555,
+          312
+        ],
+        "bytes": 178841,
+        "left": 0.0,
+        "top": 0.91,
+        "width": 10.0,
+        "height": 5.62
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 25,
+    "texts": [],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          633,
+          475
+        ],
+        "bytes": 24787,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.0,
+        "height": 7.5
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 26,
+    "texts": [
+      {
+        "name": "Text Box 8",
+        "text": "Terra",
+        "left": 3.58,
+        "top": 3.04,
+        "width": 0.76,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 9",
+        "text": "Marte",
+        "left": 0.83,
+        "top": 3.04,
+        "width": 0.8,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 10",
+        "text": "Venere",
+        "left": 2.01,
+        "top": 3.04,
+        "width": 0.94,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 12",
+        "text": "Terra",
+        "left": 4.69,
+        "top": 3.75,
+        "width": 0.76,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 22",
+        "text": "Nettuno",
+        "left": 5.08,
+        "top": 4.19,
+        "width": 1.04,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 24",
+        "text": "Urano",
+        "left": 5.79,
+        "top": 3.44,
+        "width": 0.84,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 27",
+        "text": "Pianeti giganti\nSaturno e Giove",
+        "left": 7.2,
+        "top": 3.2,
+        "width": 1.91,
+        "height": 0.64,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 28",
+        "text": "Giove",
+        "left": 3.19,
+        "top": 6.82,
+        "width": 0.82,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 29",
+        "text": "Sole",
+        "left": 4.69,
+        "top": 5.72,
+        "width": 0.73,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 4",
+        "ext": "png",
+        "size": [
+          800,
+          151
+        ],
+        "bytes": 216859,
+        "left": 0.0,
+        "top": 1.23,
+        "width": 10.0,
+        "height": 1.89
+      },
+      {
+        "name": "Picture 6",
+        "ext": "png",
+        "size": [
+          177,
+          132
+        ],
+        "bytes": 43045,
+        "left": 3.27,
+        "top": 4.85,
+        "width": 2.68,
+        "height": 2.0
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 27,
+    "texts": [
+      {
+        "name": "Text Box 8",
+        "text": "Sole",
+        "left": 1.3,
+        "top": 3.04,
+        "width": 0.73,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 9",
+        "text": "Sirio",
+        "left": 3.06,
+        "top": 3.04,
+        "width": 0.76,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 10",
+        "text": "Sirio",
+        "left": 4.92,
+        "top": 3.59,
+        "width": 0.76,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 13",
+        "text": "Aldebaran",
+        "left": 7.68,
+        "top": 3.12,
+        "width": 1.29,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 18",
+        "text": "Betelgeuse",
+        "left": 3.03,
+        "top": 6.66,
+        "width": 1.39,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 19",
+        "text": "Betelgeuse",
+        "left": 4.69,
+        "top": 6.66,
+        "width": 1.39,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 20",
+        "text": "VY Canis Majoris",
+        "left": 8.11,
+        "top": 6.74,
+        "width": 2.01,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 22",
+        "text": "Giove",
+        "left": 0.2,
+        "top": 3.51,
+        "width": 0.9,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [],
+    "images": [
+      {
+        "name": "Picture 6",
+        "ext": "png",
+        "size": [
+          800,
+          149
+        ],
+        "bytes": 227331,
+        "left": 0.0,
+        "top": 4.77,
+        "width": 10.0,
+        "height": 1.86
+      },
+      {
+        "name": "Picture 7",
+        "ext": "png",
+        "size": [
+          800,
+          224
+        ],
+        "bytes": 243853,
+        "left": 0.27,
+        "top": 0.52,
+        "width": 9.37,
+        "height": 2.62
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 28,
+    "texts": [
+      {
+        "name": "Text Box 3",
+        "text": "VY Canis Majoris",
+        "left": 7.13,
+        "top": 1.78,
+        "width": 2.23,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 6",
+        "text": "Sole",
+        "left": 3.01,
+        "top": 2.35,
+        "width": 0.73,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "VY Canis Majoris. Situata nella costellazione del Cane Maggiore a quasi 4000 anni luce dal Sole. È una delle stelle più grandi conosciute (ipergigante rossa), con un raggio pari a circa 1420 volte il raggio solare (696000 km) e, in virtù delle sue dimensioni, una delle più luminose della Via Lattea."
+    ],
+    "images": [
+      {
+        "name": "Picture 2",
+        "ext": "png",
+        "size": [
+          800,
+          600
+        ],
+        "bytes": 44251,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 10.0,
+        "height": 7.5
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 29,
+    "texts": [
+      {
+        "name": "Rectangle 4",
+        "text": "VY Canis Majoris",
+        "left": 0.0,
+        "top": 0.0,
+        "width": 2.23,
+        "height": 0.4,
+        "font_sizes": []
+      }
+    ],
+    "notes": [
+      "La stella, circondata da un guscio di materia emessa dalla stessa, ripresa nel visibile dal Telescopio spaziale Hubble"
+    ],
+    "images": [
+      {
+        "name": "Picture 3",
+        "ext": "png",
+        "size": [
+          600,
+          600
+        ],
+        "bytes": 310408,
+        "left": 1.02,
+        "top": 0.0,
+        "width": 7.52,
+        "height": 7.52
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 30,
+    "texts": [],
+    "notes": [
+      "Altro mezzo di comparazione potrebbe essere il fatto che la luce, che impiega poco più di un secondo dalla Terra alla Luna, avrebbe bisogno di quasi 8 ore per fare un giro completo attorno alla stella."
+    ],
+    "images": [
+      {
+        "name": "Picture 2",
+        "ext": "png",
+        "size": [
+          800,
+          500
+        ],
+        "bytes": 92032,
+        "left": 0.0,
+        "top": 0.41,
+        "width": 10.0,
+        "height": 6.25
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 31,
+    "texts": [],
+    "notes": [
+      "Stella ipergigante rossa situata nella costellazione dello Scudo (Via Lattea) distante circa 9460 anni luce dal nostro pianeta. Al 2018 si trattava della più grande stella conosciuta, con un raggio medio 1708 volte quello del Sole equivalente a quasi 8 unità astronomiche."
+    ],
+    "images": [
+      {
+        "name": "Segnaposto contenuto 3",
+        "ext": "png",
+        "size": [
+          833,
+          1087
+        ],
+        "bytes": 344629,
+        "left": 1.77,
+        "top": 0.01,
+        "width": 5.75,
+        "height": 7.5
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  },
+  {
+    "slide": 32,
+    "texts": [
+      {
+        "name": "Text Box 10",
+        "text": "Storia dell’Universo",
+        "left": 3.82,
+        "top": 3.04,
+        "width": 2.55,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 16",
+        "text": "Formazione della Terra",
+        "left": 4.53,
+        "top": 0.99,
+        "width": 2.94,
+        "height": 0.4,
+        "font_sizes": []
+      },
+      {
+        "name": "Text Box 29",
+        "text": "storia di Homo sapiens",
+        "left": 5.74,
+        "top": 5.9,
+        "width": 2.65,
+        "height": 0.37,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 46",
+        "text": "si sviluppa il 99% della tecnologia \nche utilizziamo oggi",
+        "left": 5.71,
+        "top": 6.27,
+        "width": 3.85,
+        "height": 0.64,
+        "font_sizes": [
+          16.0
+        ]
+      },
+      {
+        "name": "Text Box 48",
+        "text": "ultimo millimetro",
+        "left": 1.74,
+        "top": 4.77,
+        "width": 1.77,
+        "height": 0.33,
+        "font_sizes": [
+          14.0
+        ]
+      }
+    ],
+    "notes": [
+      "La centesima parte di questo millimetro equivale agli ultimi 300 000 anni e quindi al tempo in cui esiste Homo sapiens sulla Terra."
+    ],
+    "images": [
+      {
+        "name": "Picture 6",
+        "ext": "png",
+        "size": [
+          640,
+          113
+        ],
+        "bytes": 103083,
+        "left": 0.0,
+        "top": 1.86,
+        "width": 10.0,
+        "height": 1.26
+      }
+    ],
+    "tables": 0,
+    "charts": 0
+  }
+]
