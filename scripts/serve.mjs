@@ -38,7 +38,9 @@ const server = http.createServer((req, res) => {
       'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=3600',
     });
     if (req.method === 'HEAD') { res.end(); return; }
-    fs.createReadStream(target).pipe(res);
+    const stream = fs.createReadStream(target);
+    stream.on('error', () => res.destroy());
+    stream.pipe(res);
   } catch (e) {
     res.writeHead(500); res.end('Internal error');
   }
