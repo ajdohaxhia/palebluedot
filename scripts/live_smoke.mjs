@@ -5,7 +5,7 @@ const errors=[], failed=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',m=>{if(m.type()==='error'&&!m.text().includes('GL Driver')) errors.push(m.text());});
 page.on('requestfailed',r=>failed.push(`${r.url()} :: ${r.failure()?.errorText}`));
-await page.goto('https://eon-atlas.pages.dev/?quality=low', {waitUntil:'domcontentloaded', timeout:90000});
+await page.goto('https://cosmos-atlante.pages.dev/?quality=low', {waitUntil:'domcontentloaded', timeout:90000});
 await page.waitForFunction(()=>window.EON?.ready, null, {timeout:90000});
 await page.waitForFunction(()=>window.EON?.catalogsReady, null, {timeout:60000}).catch(()=>{});
 await page.waitForTimeout(3000);
