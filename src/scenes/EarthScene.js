@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitRig, TouchEnhancer } from '../engine/camera.js';
 import { LabelLayer } from '../engine/labels.js';
 import { SkyDome, earthSkyRotation } from '../engine/sky.js';
-import { makeGlowTexture } from '../engine/procedural.js';
+import { makeGlowTexture, makeCoronaTexture } from '../engine/procedural.js';
 import {
   SUN, MOONS, EARTH_RADIUS_KM, EARTH_MASS_KG, AU_KM,
   SOURCES, EARTH_LANDMARKS,
@@ -386,6 +386,31 @@ export class EarthScene {
     this.sunGlow.scale.setScalar(4.6);
     this.sunGlow.position.set(1, 0, 0).multiplyScalar(800);
     this.scene.add(this.sunGlow);
+
+    // Wide streamer corona. It is a child of the glow, so it follows the Sun
+    // and its scale is relative to the parent sprite.
+    this.sunCorona = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeCoronaTexture(),
+      transparent: true,
+      opacity: 0.55,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      depthTest: true,
+    }));
+    this.sunCorona.scale.setScalar(3.4);
+    this.sunGlow.add(this.sunCorona);
+
+    // Small, intense core so the disc reads as white-hot and feeds the bloom pass.
+    this.sunCore = new THREE.Sprite(new THREE.SpriteMaterial({
+      map: makeGlowTexture({ color: '255,250,240', core: 0.1, halo: 0.5 }),
+      transparent: true,
+      opacity: 0.9,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      depthTest: true,
+    }));
+    this.sunCore.scale.setScalar(0.28);
+    this.sunGlow.add(this.sunCore);
   }
 
   _buildGraticule() {
