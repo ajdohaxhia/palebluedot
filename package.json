@@ -1,0 +1,21 @@
+{
+  "name": "cosmos-atlante",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "COSMOS \u2014 Atlante interattivo di Geografia astronomica. La presentazione UDA 2 e 3, ricostruita come esperienza interattiva in 32 tappe.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test tests/astronomy.test.mjs tests/cosmos.test.mjs",
+    "test:e2e": "node tests/cosmos.e2e.mjs",
+    "data": "node scripts/build_data.mjs",
+    "deploy": "node scripts/prepare_deploy.mjs && wrangler pages deploy dist --project-name cosmos-atlante --branch main --commit-dirty=true",
+    "test:eon": "node --test tests/astronomy.test.mjs",
+    "map": "node scripts/build_presentation_map.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.55.0",
+    "wrangler": "^4.158.0"
+  }
+}

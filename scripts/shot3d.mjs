@@ -1,0 +1,14 @@
+import { chromium } from 'playwright-core';
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1280,height:800}});
+await page.goto('http://127.0.0.1:5173/?quality=low',{waitUntil:'domcontentloaded'});
+await page.waitForFunction(()=>window.EON?.ready,null,{timeout:90000});
+await page.evaluate(()=>localStorage.removeItem('cosmos.step'));
+await page.waitForTimeout(700);
+await page.click('[data-cs="start"]');
+await page.waitForTimeout(2500);
+await page.evaluate(()=>cancelAnimationFrame(window.EON.frameHandle));
+console.log('shooting 3d first');
+await page.screenshot({path:'screenshots/cosmos-3d-first.png',timeout:60000,animations:'disabled'});
+console.log('shot ok');
+process.exit(0);

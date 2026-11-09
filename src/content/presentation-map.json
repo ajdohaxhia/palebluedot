@@ -1,0 +1,2152 @@
+{
+  "project": "COSMOS — Atlante interattivo di Geografia astronomica",
+  "sourceFile": "Presentazione Geografia astronomica UDA 2 e 3.pptx",
+  "language": "it",
+  "generatedAt": "2026-11-09T17:37:36.154Z",
+  "summary": {
+    "sourceSlides": 32,
+    "representedSlides": 32,
+    "speakerNotesPreserved": 21,
+    "threeDScenes": 32,
+    "interactiveComponents": 32,
+    "coverage": "32/32"
+  },
+  "slides": [
+    {
+      "slide": 1,
+      "sourceSlide": 1,
+      "heading": "Pale Blue Dot",
+      "section": "UDA 2",
+      "originalSlideText": "Pale Blue Dot\n\nVoyager 1 (1990)",
+      "slideText": "Pale Blue Dot\n\nVoyager 1 (1990)",
+      "speakerNotes": "Nel 1990 la sonda spaziale Vojager 1 - lanciata nel 1977 da Cape Canaveral, Florida, costruita dal Jet Propulsion Laboratory - ha scattato questa foto alla Terra quando si trovava ad oltre 6 miliardi di chilometri da quest’ultima (40 UA circa, oltre l’orbita di Nettuno). Questa celebre foto è la pale blue dot (pallido puntino blu) che mostra la Terra della dimensione di meno di un pixel (0,12 pixel). Nel 2001 tale foto è stata definita come una delle dieci migliori immagini scientifiche dello spazio di tutti i tempi. La Vojager 1 è l’oggetto costruito dall’uomo più lontano dalla Terra. Oggi procede alla velocità di circa 61.000 km/h e percorrerà la distanza di 1 anno luce fra 17.700 anni. Tra 30 000 anni raggiungerà la nube di Oort.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Voyager 1",
+        "Terra",
+        "Sole",
+        "Pale Blue Dot"
+      ],
+      "numericalValues": [
+        {
+          "label": "Data",
+          "value": "14 febbraio 1990"
+        },
+        {
+          "label": "Distanza della sonda",
+          "value": "≈ 40 UA · 6 miliardi di km"
+        },
+        {
+          "label": "La Terra nell'immagine",
+          "value": "0,12 pixel"
+        },
+        {
+          "label": "Voyager 1 oggi",
+          "value": "oltre 160 UA"
+        }
+      ],
+      "teachingObjective": "Comprendere la scala della distanza interplanetaria e il significato della Pale Blue Dot.",
+      "teachingObjectives": [
+        "Comprendere la scala della distanza interplanetaria e il significato della Pale Blue Dot."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-01.png",
+        "assets/cosmos/images/pale-blue-dot.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-01.png",
+        "assets/cosmos/images/pale-blue-dot.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 45,
+        "label": "Sistema Solare esterno · ~45 UA",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci la fotografia con la rotella o i pulsanti. Tocca i punti di annotazione per capire cosa stai guardando. Confronta la distanza con la sonda nella scheda Dati."
+      },
+      "scientificVerificationStatus": "historical",
+      "scientificNote": "La fotografia è del 1990; Voyager 1 ha superato l'eliopausa nel 2012.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 2,
+      "sourceSlide": 2,
+      "heading": "L'unità astronomica",
+      "section": "UDA 2",
+      "originalSlideText": "150 milioni di km\n\nUnità astronomica (UA)",
+      "slideText": "150 milioni di km\n\nUnità astronomica (UA)",
+      "speakerNotes": "L’unità astronomica (UA, au) corrisponde alla distanza media tra la Terra e il Sole ed equivale a circa 150 milioni di km. È un’unità di lunghezza utilizzata per la misurazione delle distanze tra oggetti celesti all’interno del Sistema solare.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Sole",
+        "Terra",
+        "Unità astronomica"
+      ],
+      "numericalValues": [
+        {
+          "label": "1 UA",
+          "value": "149.597.870,7 km"
+        },
+        {
+          "label": "Luce Sole–Terra",
+          "value": "8 min 19 s"
+        },
+        {
+          "label": "1 UA in luce",
+          "value": "8,317 minuti luce"
+        }
+      ],
+      "teachingObjective": "Definire l'unità astronomica e usarla per misurare le distanze nel Sistema Solare.",
+      "teachingObjectives": [
+        "Definire l'unità astronomica e usarla per misurare le distanze nel Sistema Solare."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-02.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-02.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 2.2,
+        "label": "Sole–Terra · 1 UA",
+        "primary": true
+      },
+      "plannedComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "optionalInteractiveComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "plannedInteractiveComponent": {
+        "type": "distance",
+        "label": "Diagramma interattivo di distanza e viaggio della luce",
+        "interaction": "Avvia l'animazione della luce. Cambia unità tra km e UA. Leggi il tempo reale impiegato dalla luce."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": null,
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "IAU",
+        "NASA/JPL Solar System Dynamics"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 3,
+      "sourceSlide": 3,
+      "heading": "Il Sistema Solare",
+      "section": "UDA 2",
+      "originalSlideText": "1 UA\n\n40 UA\n\nPIANETI INTERNI\n\nPIANETI ESTERNI\n\nParte del SISTEMA SOLARE",
+      "slideText": "1 UA\n\n40 UA\n\nPIANETI INTERNI\n\nPIANETI ESTERNI\n\nParte del SISTEMA SOLARE",
+      "speakerNotes": "Velocità di rotazione lineare terrestre in Italia: 1240 km/h\n\nVelocità di rivoluzione terrestre: circa 100 000 km/h, circa in media 30 km/s\n\nVelocità rivoluzione del Sole: 720 000 km/h (secondo l’Università di Stanford)\n\nVelocità di recessione della Via Lattea: 600 km/s (probabilmente)",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Sole",
+        "Mercurio",
+        "Venere",
+        "Terra",
+        "Marte",
+        "Giove",
+        "Saturno",
+        "Urano",
+        "Nettuno",
+        "Plutone"
+      ],
+      "numericalValues": [
+        {
+          "label": "Pianeti",
+          "value": "8 · 4 interni + 4 esterni"
+        },
+        {
+          "label": "Pianeti nani",
+          "value": "Plutone, Cerere, Eris…"
+        },
+        {
+          "label": "Scala della slide",
+          "value": "1 UA → 40 UA"
+        },
+        {
+          "label": "Velocità orbitale della Terra",
+          "value": "~30 km/s"
+        }
+      ],
+      "teachingObjective": "Distinguere pianeti interni ed esterni e riconoscere i movimenti di rotazione e rivoluzione.",
+      "teachingObjectives": [
+        "Distinguere pianeti interni ed esterni e riconoscere i movimenti di rotazione e rivoluzione."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-03.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-03.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 50,
+        "label": "Sistema Solare · vista sinottica",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Usa i pulsanti dei pianeti per cambiare oggetto. Trascina per orbitare; rotella o pinch per avvicinarti. Confronta le velocità nella scheda, ricordando i diversi sistemi di riferimento."
+      },
+      "scientificVerificationStatus": "approximate",
+      "scientificNote": "Plutone è un pianeta nano dal 2006; la slide lo inserisce tra i corpi del Sistema Solare.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/JPL Solar System Dynamics",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 4,
+      "sourceSlide": 4,
+      "heading": "Le distanze nel Sistema Solare",
+      "section": "UDA 2",
+      "originalSlideText": "0,4 UA\n\n5 UA\n\n1 UA: circa 150 milioni di km\n\n30 UA\n\n9,5 UA\n\n1,5 UA\n\n0,7 UA\n\n19 UA\n\n39 UA: circa 6 miliardi di km",
+      "slideText": "0,4 UA\n\n5 UA\n\n1 UA: circa 150 milioni di km\n\n30 UA\n\n9,5 UA\n\n1,5 UA\n\n0,7 UA\n\n19 UA\n\n39 UA: circa 6 miliardi di km",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Mercurio",
+        "Venere",
+        "Terra",
+        "Marte",
+        "Giove",
+        "Saturno",
+        "Urano",
+        "Nettuno",
+        "Plutone",
+        "Voyager 1"
+      ],
+      "numericalValues": [
+        {
+          "label": "Mercurio → Nettuno",
+          "value": "0,39 → 30,1 UA"
+        },
+        {
+          "label": "Plutone",
+          "value": "~39,5 UA"
+        },
+        {
+          "label": "Voyager 1 (2025)",
+          "value": "~168 UA"
+        }
+      ],
+      "teachingObjective": "Ordinare i pianeti per distanza e confrontare le distanze in UA.",
+      "teachingObjectives": [
+        "Ordinare i pianeti per distanza e confrontare le distanze in UA."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-04.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-04.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 60,
+        "label": "Sistema Solare · distanze orbitali",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Volo verso i pianeti con i pulsanti. Confronta la distanza in UA delle schede. Passa alla modalità vera scala quando vuoi leggere le dimensioni."
+      },
+      "scientificVerificationStatus": "approximate",
+      "scientificNote": "Le distanze sono medie e arrotondate; Voyager 1 è indicata a 168 UA con data 2025.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/JPL Solar System Dynamics"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 5,
+      "sourceSlide": 5,
+      "heading": "Fascia di Kuiper e nube di Oort",
+      "section": "UDA 2",
+      "originalSlideText": "20 mila – 100 mila UA 0.3 – 1,5 al dal Sole\n\n30 – 50 UA dal Sole",
+      "slideText": "20 mila – 100 mila UA 0.3 – 1,5 al dal Sole\n\n30 – 50 UA dal Sole",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Fascia di Kuiper",
+        "Nube di Oort",
+        "Plutone"
+      ],
+      "numericalValues": [
+        {
+          "label": "Fascia di Kuiper",
+          "value": "30–50 UA"
+        },
+        {
+          "label": "Nube di Oort",
+          "value": "20.000–100.000 UA"
+        },
+        {
+          "label": "Distanza in anni luce",
+          "value": "0,3–1,5 al"
+        }
+      ],
+      "teachingObjective": "Distinguere la fascia di Kuiper osservata dal modello della nube di Oort.",
+      "teachingObjectives": [
+        "Distinguere la fascia di Kuiper osservata dal modello della nube di Oort."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-05.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-05.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 140,
+        "label": "Sistema Solare esterno",
+        "primary": true
+      },
+      "plannedComponent": "Scala logaritmica interattiva dei confini",
+      "optionalInteractiveComponent": "Scala logaritmica interattiva dei confini",
+      "plannedInteractiveComponent": {
+        "type": "boundaries",
+        "label": "Scala logaritmica interattiva dei confini",
+        "interaction": "Attiva e disattiva i confini. Osserva la scala logaritmica: ogni segmento moltiplica la distanza. Distingui le strutture osservate dal modello della nube di Oort."
+      },
+      "scientificVerificationStatus": "model",
+      "scientificNote": "La nube di Oort non è osservata direttamente: è un modello teorico.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 6,
+      "sourceSlide": 6,
+      "heading": "La Terra dall'Apollo 17",
+      "section": "UDA 2",
+      "originalSlideText": "Terra ripresa dall’Apollo 17 (1972)\n\nDiametro equatoriale: poco meno di 13 mila km",
+      "slideText": "Terra ripresa dall’Apollo 17 (1972)\n\nDiametro equatoriale: poco meno di 13 mila km",
+      "speakerNotes": "Undicesima ed ultima missione Apollo 17 (1972)\n\nProgramma Apollo (1961-1972): 12 uomini camminano sul nostro satellite naturale\n\n1959 – foto terra Orbiter 6 (USA) nella sua interezza",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Terra",
+        "Apollo 17"
+      ],
+      "numericalValues": [
+        {
+          "label": "Diametro",
+          "value": "12.742 km"
+        },
+        {
+          "label": "Distanza dal Sole",
+          "value": "1 UA · 149,6 milioni di km"
+        },
+        {
+          "label": "Un satellite naturale",
+          "value": "la Luna"
+        }
+      ],
+      "teachingObjective": "Descrivere la Terra e l'importanza delle fotografie Apollo.",
+      "teachingObjectives": [
+        "Descrivere la Terra e l'importanza delle fotografie Apollo."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-06.png",
+        "assets/cosmos/images/apollo-17-earth.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-06.png",
+        "assets/cosmos/images/apollo-17-earth.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "earth",
+        "mode": "earth",
+        "distance": 3.2,
+        "label": "Terra",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci la fotografia e cerca i dettagli della superficie. Apri la Terra in 3D per vedere il pianeta ruotare. Confronta il diametro con la distanza Terra–Luna nella tappa 08."
+      },
+      "scientificVerificationStatus": "historical",
+      "scientificNote": "La fotografia Apollo 17 è del dicembre 1972.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 7,
+      "sourceSlide": 7,
+      "heading": "La Luna",
+      "section": "UDA 2",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "16 luglio 1969 – Lancio Apollo 11 da Cape Canaveral (Florida)\n\n20 luglio 1969 - Arrivo in orbita intorno alla Luna\n\n21 luglio 1969 - Allunaggio (Mare della Tranquillità) di Armstrong e Aldrin\n\n24 luglio 1969 - Ammarraggio nell’Oceano Pacifico (ritorno sulla Terra)",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Luna",
+        "Apollo 11",
+        "Mare della Tranquillità"
+      ],
+      "numericalValues": [
+        {
+          "label": "Distanza media",
+          "value": "384.400 km"
+        },
+        {
+          "label": "Diametro",
+          "value": "3.474,8 km"
+        },
+        {
+          "label": "Apollo 11",
+          "value": "20 luglio 1969"
+        },
+        {
+          "label": "Persone sulla Luna",
+          "value": "12"
+        }
+      ],
+      "teachingObjective": "Ricostruire le tappe della missione Apollo 11 e distinguere allunaggio e primo passo.",
+      "teachingObjectives": [
+        "Ricostruire le tappe della missione Apollo 11 e distinguere allunaggio e primo passo."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-07.png",
+        "assets/cosmos/images/moon.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-07.png",
+        "assets/cosmos/images/moon.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "earth",
+        "mode": "moon",
+        "distance": 1.35,
+        "label": "Luna",
+        "primary": true
+      },
+      "plannedComponent": "Linea del tempo interattiva",
+      "optionalInteractiveComponent": "Linea del tempo interattiva",
+      "plannedInteractiveComponent": {
+        "type": "timeline",
+        "label": "Linea del tempo interattiva",
+        "interaction": "Seleziona un evento sulla linea del tempo. Osserva la distinzione tra allunaggio e primo passo. Apri la Luna in 3D per vedere il Mare della Tranquillità."
+      },
+      "scientificVerificationStatus": "historical",
+      "scientificNote": "La slide contiene solo l'immagine della Luna; la timeline Apollo è un approfondimento verificato.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 8,
+      "sourceSlide": 8,
+      "heading": "Terra e Luna dalla MESSENGER",
+      "section": "UDA 2",
+      "originalSlideText": "Foto scattata dalla navicella MESSENGER della NASA",
+      "slideText": "Foto scattata dalla navicella MESSENGER della NASA",
+      "speakerNotes": "Terra e Luna riprese da una distanza di 183 milioni di km",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Terra",
+        "Luna",
+        "MESSENGER"
+      ],
+      "numericalValues": [
+        {
+          "label": "Distanza dalla sonda",
+          "value": "183 milioni di km"
+        },
+        {
+          "label": "Distanza media Terra–Luna",
+          "value": "384.403 km"
+        },
+        {
+          "label": "In diametri terrestri",
+          "value": "~30"
+        }
+      ],
+      "teachingObjective": "Confrontare il diametro terrestre con la distanza Terra–Luna.",
+      "teachingObjectives": [
+        "Confrontare il diametro terrestre con la distanza Terra–Luna."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-08.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-08.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "earth",
+        "mode": "earth-moon",
+        "label": "Terra–Luna",
+        "primary": true
+      },
+      "plannedComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "optionalInteractiveComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "plannedInteractiveComponent": {
+        "type": "distance",
+        "label": "Diagramma interattivo di distanza e viaggio della luce",
+        "interaction": "Passa da scala didattica a scala reale. Muovi la Luna lungo la misura. Avvia il segnale luminoso: 1,28 secondi."
+      },
+      "scientificVerificationStatus": "historical",
+      "scientificNote": "Distanza media 384.403 km; la fotografia MESSENGER è indicata nella slide.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 9,
+      "sourceSlide": 9,
+      "heading": "I confini del Sistema Solare",
+      "section": "UDA 2",
+      "originalSlideText": "200 000 UA - 30 000 miliardi di km (Il confine ?)\n\n168 UA (2025)",
+      "slideText": "200 000 UA - 30 000 miliardi di km (Il confine ?)\n\n168 UA (2025)",
+      "speakerNotes": "Tre confini considerabili dagli astronomi (1) la fascia di Kuiper (caratterizzata da asteroidi e pianeti nani, compreso Plutone tra 30 e 50 UA); (2) L’eliopausa (dove finisce l’influenza del vento solare) che varia dalle 80 alle 100 UA e oltre la quale il plasma non è di origine solare (superata nel 2012 dalla Voyager I); (3) la nube di Oort (dove finisce veramente l’influenza gravitazionale del Sole, reale confine se consideriamo il sistema solare come il Sole e i corpi che gli girano intorno: 0,3 – 1,5 al dal Sole. La NASA e gli astronomi preferiscono l’eliopausa.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Fascia di Kuiper",
+        "Eliopausa",
+        "Nube di Oort",
+        "Voyager 1"
+      ],
+      "numericalValues": [
+        {
+          "label": "Fascia di Kuiper",
+          "value": "30–50 UA"
+        },
+        {
+          "label": "Eliopausa",
+          "value": "~80–120 UA"
+        },
+        {
+          "label": "Nube di Oort",
+          "value": "0,3–1,5 al"
+        },
+        {
+          "label": "Voyager 1",
+          "value": "168 UA (2025)"
+        }
+      ],
+      "teachingObjective": "Spiegare i tre confini del Sistema Solare e la differenza tra misure e modelli.",
+      "teachingObjectives": [
+        "Spiegare i tre confini del Sistema Solare e la differenza tra misure e modelli."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-09.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-09.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 160,
+        "label": "Sistema Solare esterno",
+        "primary": true
+      },
+      "plannedComponent": "Scala logaritmica interattiva dei confini",
+      "optionalInteractiveComponent": "Scala logaritmica interattiva dei confini",
+      "plannedInteractiveComponent": {
+        "type": "boundaries",
+        "label": "Scala logaritmica interattiva dei confini",
+        "interaction": "Mostra uno alla volta Kuiper, eliopausa e Oort. Leggi le distanze in UA e anni luce. Confronta la posizione storica di Voyager 1 con l'eliopausa."
+      },
+      "scientificVerificationStatus": "model",
+      "scientificNote": "L'eliopausa è una regione di transizione; la NASA la usa come confine operativo. La nube di Oort è un modello.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 10,
+      "sourceSlide": 10,
+      "heading": "La placca delle Pioneer",
+      "section": "UDA 2",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "Sulle sonde Pioneer 10 (lancio: 1972) e Pioneer11 (lancio: 1973) attualmente rispettivamente a 120 UA e 104 UA dalla Terra (lanciate da Cape Canaveral e costruite dal Jet Propulsion Laboratory",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Pioneer 10",
+        "Pioneer 11",
+        "placca Pioneer"
+      ],
+      "numericalValues": [
+        {
+          "label": "Pioneer 10",
+          "value": "lancio 2 marzo 1972"
+        },
+        {
+          "label": "Pioneer 11",
+          "value": "lancio 5 aprile 1973"
+        },
+        {
+          "label": "Supporto",
+          "value": "placca d'alluminio dorato"
+        },
+        {
+          "label": "Distanza (2025)",
+          "value": "Pioneer 10 ~140 UA · Pioneer 11 ~115 UA"
+        }
+      ],
+      "teachingObjective": "Conoscere le sonde Pioneer e il loro messaggio verso lo spazio interstellare.",
+      "teachingObjectives": [
+        "Conoscere le sonde Pioneer e il loro messaggio verso lo spazio interstellare."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-10.png",
+        "assets/cosmos/images/plaque-mounted.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-10.png",
+        "assets/cosmos/images/plaque-mounted.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 200,
+        "label": "Sistema Solare esterno",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci il supporto e la placca. Apri la tappa 11 per leggere i simboli. Ricorda: le distanze delle sonde cambiano ogni anno."
+      },
+      "scientificVerificationStatus": "historical",
+      "scientificNote": "La placca è un messaggio simbolico; le distanze delle sonde sono datate.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 11,
+      "sourceSlide": 11,
+      "heading": "Il messaggio delle Pioneer",
+      "section": "UDA 2",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "placca Pioneer",
+        "atomo di idrogeno",
+        "pulsar",
+        "Sistema Solare",
+        "figure umane"
+      ],
+      "numericalValues": [
+        {
+          "label": "Formato",
+          "value": "23 × 15 cm · alluminio dorato"
+        },
+        {
+          "label": "Unità di misura",
+          "value": "transizione dell'idrogeno"
+        },
+        {
+          "label": "Mappa",
+          "value": "14 pulsar · posizione del Sole"
+        },
+        {
+          "label": "Figure",
+          "value": "donna e uomo · proporzioni"
+        }
+      ],
+      "teachingObjective": "Interpretare i simboli della placca Pioneer.",
+      "teachingObjectives": [
+        "Interpretare i simboli della placca Pioneer."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-11.png",
+        "assets/cosmos/images/pioneer-plaque.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-11.png",
+        "assets/cosmos/images/pioneer-plaque.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 200,
+        "label": "Sistema Solare esterno",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Tocca i quattro hotspot per esplorare i simboli. Ingrandisci la mappa dei pulsar. Confronta la placca Pioneer con il disco d'oro Voyager: sono messaggi diversi."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "La placca Pioneer è distinta dal disco d'oro delle Voyager.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 12,
+      "sourceSlide": 12,
+      "heading": "L'anno luce",
+      "section": "UDA 3",
+      "originalSlideText": "Anno luce (al)",
+      "slideText": "Anno luce (al)",
+      "speakerNotes": "L’anno luce (al) corrisponde alla distanza percorsa nel vuoto dalla luce in un anno. Equivale a circa 9 500 miliardi di km ed è una unità di lunghezza per la misura di distanze tra oggetti celesti al di fuori del Sistema solare (esempio tra stelle).\n\n1 UA corrisponde a 8,2 minuti luce. La luce impiega circa 1,28 secondi per percorrere la distanza che separa la Terra dalla Luna.\n\nIn una scala in cui la Terra avesse un diametro di 1 cm, un anno luce corrisponderebbe ad una distanza di 7.423,80 chilometri.\n\nLa luce impiega poco più di 8 minuti per viaggiare dal Sole alla Terra.\n\nUn'ora luce corrisponde a circa 1,08 miliardi di chilometri (circa la distanza tra il Sole e Saturno).",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "anno luce",
+        "Sole",
+        "Terra",
+        "Luna"
+      ],
+      "numericalValues": [
+        {
+          "label": "1 anno luce",
+          "value": "9.4607 × 10¹² km"
+        },
+        {
+          "label": "Sole–Terra",
+          "value": "8 min 19 s"
+        },
+        {
+          "label": "Luna–Terra",
+          "value": "1,28 s"
+        },
+        {
+          "label": "1 UA",
+          "value": "8,317 minuti luce"
+        }
+      ],
+      "teachingObjective": "Definire l'anno luce come distanza e convertire correttamente le unità.",
+      "teachingObjectives": [
+        "Definire l'anno luce come distanza e convertire correttamente le unità."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-12.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-12.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "stars",
+        "scaleMeters": 300000000000000000,
+        "label": "Stelle vicine",
+        "primary": true
+      },
+      "plannedComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "optionalInteractiveComponent": "Diagramma interattivo di distanza e viaggio della luce",
+      "plannedInteractiveComponent": {
+        "type": "distance",
+        "label": "Diagramma interattivo di distanza e viaggio della luce",
+        "interaction": "Converti km, UA, secondi luce e anni luce. Avvia il raggio di luce. Ricorda: l'anno luce misura una distanza, non un tempo."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "Un anno luce è una distanza, non un tempo.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 13,
+      "sourceSlide": 13,
+      "heading": "La stella più vicina",
+      "section": "UDA 3",
+      "originalSlideText": "3 al",
+      "slideText": "3 al",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Proxima Centauri",
+        "Alpha Centauri"
+      ],
+      "numericalValues": [
+        {
+          "label": "Proxima Centauri",
+          "value": "4,2465 al · 1,30 pc"
+        },
+        {
+          "label": "Alpha Centauri A/B",
+          "value": "4,37 al"
+        },
+        {
+          "label": "Tempo della luce",
+          "value": "4,2 anni"
+        },
+        {
+          "label": "Tipo di Proxima",
+          "value": "nana rossa"
+        }
+      ],
+      "teachingObjective": "Comprendere il salto dal Sistema Solare alle stelle vicine.",
+      "teachingObjectives": [
+        "Comprendere il salto dal Sistema Solare alle stelle vicine."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-13.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-13.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "star",
+        "target": "Proxima Centauri",
+        "label": "Proxima Centauri",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Volo verso Proxima e Alpha Centauri. Osserva la differenza tra scala solare e interstellare. Apri la scheda per leggere le distanze in anni luce."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "La slide indica 3 al come ordine di grandezza; Proxima Centauri è a 4,24 al.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 14,
+      "sourceSlide": 14,
+      "heading": "Alpha Centauri e Sirio",
+      "section": "UDA 3",
+      "originalSlideText": "4,2 al\n\n8,6 al",
+      "slideText": "4,2 al\n\n8,6 al",
+      "speakerNotes": "Alpha centauri – stella tripla nana gialla + nana arancione + nana rossa\n\nSirio – stella nana bianca",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Alpha Centauri A",
+        "Alpha Centauri B",
+        "Proxima Centauri",
+        "Sirio",
+        "Sirio B"
+      ],
+      "numericalValues": [
+        {
+          "label": "Alpha Centauri A/B",
+          "value": "4,37 al"
+        },
+        {
+          "label": "Proxima Centauri",
+          "value": "4,24 al"
+        },
+        {
+          "label": "Sirio",
+          "value": "8,60 al"
+        },
+        {
+          "label": "Sirio B",
+          "value": "nana bianca"
+        }
+      ],
+      "teachingObjective": "Confrontare Alpha Centauri e Sirio e le loro distanze.",
+      "teachingObjectives": [
+        "Confrontare Alpha Centauri e Sirio e le loro distanze."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-14.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-14.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "stars",
+        "scaleMeters": 300000000000000000,
+        "label": "Vicinato solare",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Seleziona una stella per avvicinarti. Confronta Alpha Centauri e Sirio. Osserva che le distanze sono in anni luce."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "Sirio A e Sirio B non vanno confusi; Proxima è una nana rossa.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 15,
+      "sourceSlide": 15,
+      "heading": "Il vicinato solare",
+      "section": "UDA 3",
+      "originalSlideText": "65 al\n\n100 al",
+      "slideText": "65 al\n\n100 al",
+      "speakerNotes": "Aldebaran – gigante rossa",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Aldebaran",
+        "Procyon",
+        "Tau Ceti",
+        "vicinato solare"
+      ],
+      "numericalValues": [
+        {
+          "label": "Raggio",
+          "value": "100 al"
+        },
+        {
+          "label": "Aldebaran",
+          "value": "65 al"
+        },
+        {
+          "label": "Procyon",
+          "value": "11,5 al"
+        },
+        {
+          "label": "Tau Ceti",
+          "value": "11,9 al"
+        }
+      ],
+      "teachingObjective": "Orientarsi nel vicinato solare entro 100 anni luce.",
+      "teachingObjectives": [
+        "Orientarsi nel vicinato solare entro 100 anni luce."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-15.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-15.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "stars",
+        "scaleMeters": 3000000000000000000,
+        "label": "Vicinato solare · 100 al",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Volo verso Aldebaran a 65 al. Torna alla vista d'insieme del vicinato. Confronta le distanze delle stelle della presentazione."
+      },
+      "scientificVerificationStatus": "approximate",
+      "scientificNote": "La mappa usa il catalogo HYG; le distanze stellari hanno incertezza.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 16,
+      "sourceSlide": 16,
+      "heading": "La Via Lattea",
+      "section": "UDA 3",
+      "originalSlideText": "100 mila al\n\n5 mila al",
+      "slideText": "100 mila al\n\n5 mila al",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Via Lattea",
+        "Sole",
+        "centro galattico"
+      ],
+      "numericalValues": [
+        {
+          "label": "Diametro",
+          "value": "~100.000 al"
+        },
+        {
+          "label": "Sole dal centro",
+          "value": "~26.000 al"
+        },
+        {
+          "label": "Tipo",
+          "value": "spirale barrata"
+        },
+        {
+          "label": "Stelle",
+          "value": "miliardi"
+        }
+      ],
+      "teachingObjective": "Descrivere la Via Lattea e la posizione del Sole.",
+      "teachingObjectives": [
+        "Descrivere la Via Lattea e la posizione del Sole."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-16.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-16.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "milkyway",
+        "label": "Via Lattea",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Orbita attorno alla Galassia. Individua la posizione del Sole. Ricorda: la struttura a spirale è un modello, non una fotografia dall'esterno."
+      },
+      "scientificVerificationStatus": "model",
+      "scientificNote": "Non possiamo fotografare la Via Lattea dall'esterno: la struttura 3D è un modello.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/IPAC NED",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 17,
+      "sourceSlide": 17,
+      "heading": "Il Gruppo Locale",
+      "section": "UDA 3",
+      "originalSlideText": "10 milioni al",
+      "slideText": "10 milioni al",
+      "speakerNotes": "Il Gruppo Locale è il nome proprio dato al gruppo di galassie di cui fa parte la nostra galassia, la Via Lattea. Il Gruppo Locale comprende più di 50 galassie. Le galassie del Gruppo Locale si estendono su uno spazio di 10 milioni di anni luce di diametro. Le galassie sono come isole lontane tra loro milioni di anni luce. Le due Nubi di Magellano sono due piccole galassie visibili nell’emisfero australe che orbitano intorno alla Via Lattea. Andromeda è la galassia più grande.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Via Lattea",
+        "Andromeda",
+        "Triangolo",
+        "Nubi di Magellano"
+      ],
+      "numericalValues": [
+        {
+          "label": "Galassie",
+          "value": "50+"
+        },
+        {
+          "label": "Diametro",
+          "value": "~10 milioni di al"
+        },
+        {
+          "label": "Andromeda",
+          "value": "~2,5 milioni di al"
+        },
+        {
+          "label": "Le due Nubi",
+          "value": "satelliti della Via Lattea"
+        }
+      ],
+      "teachingObjective": "Definire il Gruppo Locale e le sue galassie principali.",
+      "teachingObjectives": [
+        "Definire il Gruppo Locale e le sue galassie principali."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-17.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-17.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "local",
+        "label": "Gruppo Locale",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Volo verso Andromeda. Confronta le dimensioni delle galassie. Osserva la scala del Gruppo Locale."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": null,
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/IPAC NED"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 18,
+      "sourceSlide": 18,
+      "heading": "Andromeda e le Nubi di Magellano",
+      "section": "UDA 3",
+      "originalSlideText": "157 mila al\n\n200 mila al\n\n2,2 milioni di al",
+      "slideText": "157 mila al\n\n200 mila al\n\n2,2 milioni di al",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Grande Nube di Magellano",
+        "Piccola Nube di Magellano",
+        "Andromeda"
+      ],
+      "numericalValues": [
+        {
+          "label": "Andromeda · M31",
+          "value": "~2,54 Mly (presentazione 2,2)"
+        },
+        {
+          "label": "Grande Nube di Magellano",
+          "value": "~157.000 al"
+        },
+        {
+          "label": "Piccola Nube di Magellano",
+          "value": "~200.000 al"
+        }
+      ],
+      "teachingObjective": "Confrontare Andromeda e le Nubi di Magellano.",
+      "teachingObjectives": [
+        "Confrontare Andromeda e le Nubi di Magellano."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-18.png",
+        "assets/cosmos/images/gallery-18-1.png",
+        "assets/cosmos/images/gallery-18-2.png",
+        "assets/cosmos/images/gallery-18-3.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-18.png",
+        "assets/cosmos/images/gallery-18-1.png",
+        "assets/cosmos/images/gallery-18-2.png",
+        "assets/cosmos/images/gallery-18-3.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "galaxy",
+        "target": "m31",
+        "label": "Andromeda e Nubi di Magellano",
+        "primary": true
+      },
+      "plannedComponent": "Galleria interattiva con didascalie",
+      "optionalInteractiveComponent": "Galleria interattiva con didascalie",
+      "plannedInteractiveComponent": {
+        "type": "gallery",
+        "label": "Galleria interattiva con didascalie",
+        "interaction": "Scegli una galassia dalla galleria. Ingrandisci l'immagine e confronta le distanze. Apri il Gruppo Locale in 3D."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "La slide indica 2,2 Mly per Andromeda; le misure moderne danno ~2,54 Mly.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/IPAC NED"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 19,
+      "sourceSlide": 19,
+      "heading": "Il Superammasso della Vergine",
+      "section": "UDA 3",
+      "originalSlideText": "200 milioni al",
+      "slideText": "200 milioni al",
+      "speakerNotes": "Superammasso della Vergine. Ha la forma di un disco appiattito, con un diametro di circa 200 milioni di anni luce. Contiene circa 100 tra gruppi e ammassi di galassie. L’ammasso della Vergine contiene a differenza del gruppo locale 2500 galassie. Le galassie in media sono distanti tra loro 2-3 milioni di anni luce.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Superammasso della Vergine",
+        "Ammasso della Vergine",
+        "Gruppo Locale"
+      ],
+      "numericalValues": [
+        {
+          "label": "Superammasso",
+          "value": "~110–200 Mly"
+        },
+        {
+          "label": "Ammasso della Vergine",
+          "value": "~54 Mly"
+        },
+        {
+          "label": "Galassie",
+          "value": "migliaia"
+        },
+        {
+          "label": "Gruppo Locale",
+          "value": "periferia"
+        }
+      ],
+      "teachingObjective": "Distinguere gruppo, ammasso e superammasso.",
+      "teachingObjectives": [
+        "Distinguere gruppo, ammasso e superammasso."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-19.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-19.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "cluster",
+        "target": "virgo-cluster",
+        "label": "Superammasso della Vergine",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Passa dal Gruppo Locale all'ammasso della Vergine. Osserva le strutture cosmiche su grande scala. Distingui gruppo, ammasso e superammasso."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "La presentazione indica 200 Mly e 2.500 galassie; le stime moderne del Superammasso sono ~110 Mly. La mappa SDSS è parziale.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/IPAC NED",
+        "SDSS DR18"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 20,
+      "sourceSlide": 20,
+      "heading": "L'orizzonte cosmico",
+      "section": "UDA 3",
+      "originalSlideText": "Orizzonte cosmico: 46,5 miliardi di anni luce",
+      "slideText": "Orizzonte cosmico: 46,5 miliardi di anni luce",
+      "speakerNotes": "Attualmente si stima che l’età dell’Universo osservabile sia 13,73±0,12 miliardi di anni. la stragrande maggioranza della comunità scientifica del settore è in accordo che l’orizzonte cosmico, ovvero il bordo dell’Universo sia a più 13,7 miliardi di anni luce. Data l’espansione dell’Universo tale orizzonte si estenderebbe a 46,5 miliardi di anni luce",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "orizzonte cosmico",
+        "Universo osservabile"
+      ],
+      "numericalValues": [
+        {
+          "label": "Età",
+          "value": "13,8 miliardi di anni"
+        },
+        {
+          "label": "Raggio osservabile",
+          "value": "46,5 miliardi di al"
+        },
+        {
+          "label": "Distanza comovente",
+          "value": "~14,3 Gpc"
+        },
+        {
+          "label": "Orizzonte",
+          "value": "limite di visibilità"
+        }
+      ],
+      "teachingObjective": "Spiegare l'orizzonte osservabile e distinguerlo dall'età dell'Universo.",
+      "teachingObjectives": [
+        "Spiegare l'orizzonte osservabile e distinguerlo dall'età dell'Universo."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-20.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-20.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "observable",
+        "label": "Universo osservabile",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Orbita attorno alla sfera dell'orizzonte. Leggi le distanze nella scheda. Ricorda: l'orizzonte non è un muro fisico."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "L'orizzonte non è un muro fisico; il raggio comovente è ~46,5 Gly.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 21,
+      "sourceSlide": 21,
+      "heading": "La scala dell'Universo",
+      "section": "UDA 3",
+      "originalSlideText": "1000000000000000000000000000000000000000000000000000000000000.. al",
+      "slideText": "1000000000000000000000000000000000000000000000000000000000000.. al",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Universo osservabile",
+        "Universo oltre l'orizzonte"
+      ],
+      "numericalValues": [
+        {
+          "label": "Orizzonte",
+          "value": "46,5 miliardi di al"
+        },
+        {
+          "label": "Universo",
+          "value": "oltre ciò che vediamo"
+        },
+        {
+          "label": "Scala dell'atlante",
+          "value": "logaritmica · 10⁶–10²⁷ m"
+        }
+      ],
+      "teachingObjective": "Comprendere i limiti della conoscenza oltre l'orizzonte osservabile.",
+      "teachingObjectives": [
+        "Comprendere i limiti della conoscenza oltre l'orizzonte osservabile."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-21.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-21.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "observable",
+        "label": "Oltre l’orizzonte",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Osserva il limite della sfera osservabile. Leggi la distinzione tra universo osservabile e universo intero. Non esiste una misura verificata dell'estensione totale."
+      },
+      "scientificVerificationStatus": "uncertain",
+      "scientificNote": "Non esiste una misura verificata dell'estensione totale dell'Universo.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 22,
+      "sourceSlide": 22,
+      "heading": "I Pilastri della Creazione",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "Pilastri della creazione nella Nebulosa Aquila a 7000 al da noi. Si sarebbe formato il Sole. Le stelle si formano nelle nebulose.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Nebulosa Aquila",
+        "Pilastri della Creazione",
+        "formazione stellare"
+      ],
+      "numericalValues": [
+        {
+          "label": "Nebulosa",
+          "value": "Aquila · M16 · NGC 6611"
+        },
+        {
+          "label": "Distanza",
+          "value": "~5.700–7.000 al"
+        },
+        {
+          "label": "Pilastri",
+          "value": "~4–5 al"
+        },
+        {
+          "label": "Processo",
+          "value": "formazione stellare"
+        }
+      ],
+      "teachingObjective": "Spiegare la formazione stellare nelle nebulose.",
+      "teachingObjectives": [
+        "Spiegare la formazione stellare nelle nebulose."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-22.png",
+        "assets/cosmos/images/pillars-clean.jpg"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-22.png",
+        "assets/cosmos/images/pillars-clean.jpg"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "nebula",
+        "target": "m16",
+        "label": "Nebulosa Aquila",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci i Pilastri e cerca i bordi luminosi. Tocca gli hotspot per capire la formazione stellare. Apri la nebulosa in 3D per vedere il modello dell'atlante."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "Il Sole non si è formato nella Nebulosa Aquila; l'immagine è un esempio di formazione stellare.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / ESA / Hubble / STScI"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 23,
+      "sourceSlide": 23,
+      "heading": "Il Sole",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "Il sole pesa 2 miliardi di miliardi di tonnellate ed è equivalente a 110 diametri terrestri e come volume a più di 1 milione di volumi terrestri",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Sole",
+        "Terra"
+      ],
+      "numericalValues": [
+        {
+          "label": "Diametro",
+          "value": "1.392.700 km · 109 R⊕"
+        },
+        {
+          "label": "Massa",
+          "value": "1,989 × 10³⁰ kg"
+        },
+        {
+          "label": "Volume",
+          "value": "~1,3 milioni di Terre"
+        },
+        {
+          "label": "Temperatura superficiale",
+          "value": "5.772 K"
+        }
+      ],
+      "teachingObjective": "Confrontare dimensioni e massa del Sole con la Terra.",
+      "teachingObjectives": [
+        "Confrontare dimensioni e massa del Sole con la Terra."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-23.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-23.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 0.02,
+        "label": "Sole",
+        "primary": true
+      },
+      "plannedComponent": "Atlante 3D interattivo con selezione oggetti",
+      "optionalInteractiveComponent": "Atlante 3D interattivo con selezione oggetti",
+      "plannedInteractiveComponent": {
+        "type": "atlas",
+        "label": "Atlante 3D interattivo con selezione oggetti",
+        "interaction": "Orbita attorno al Sole. Leggi massa, diametro e volume nella scheda. Confronta il Sole con la Terra nella tappa 24."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "La massa solare è ~2×10²⁷ tonnellate; la nota della presentazione omette un fattore 10⁹.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 24,
+      "sourceSlide": 24,
+      "heading": "Il Sole e i pianeti",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Sole",
+        "Mercurio",
+        "Venere",
+        "Terra",
+        "Marte",
+        "Giove",
+        "Saturno",
+        "Urano",
+        "Nettuno",
+        "Plutone"
+      ],
+      "numericalValues": [
+        {
+          "label": "Sole",
+          "value": "109 R⊕"
+        },
+        {
+          "label": "Giove",
+          "value": "11,2 R⊕"
+        },
+        {
+          "label": "Terra",
+          "value": "1 R⊕"
+        },
+        {
+          "label": "Massa del Sistema Solare nel Sole",
+          "value": "99,86%"
+        }
+      ],
+      "teachingObjective": "Confrontare il Sole con i pianeti in scala.",
+      "teachingObjectives": [
+        "Confrontare il Sole con i pianeti in scala."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-24.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-24.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 40,
+        "label": "Sole e pianeti",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Seleziona un corpo per leggere il raggio. Usa lo zoom per confrontare i pianeti tra loro. Osserva quanto il Sole domina la scala."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": null,
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/JPL Solar System Dynamics",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 25,
+      "sourceSlide": 25,
+      "heading": "Sirio, il Sole e la Terra",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Sirio A",
+        "Sole",
+        "Terra"
+      ],
+      "numericalValues": [
+        {
+          "label": "Sirio",
+          "value": "1,71 R☉ · 8,6 al"
+        },
+        {
+          "label": "Sole",
+          "value": "1 R☉"
+        },
+        {
+          "label": "Terra",
+          "value": "0,009 R☉"
+        },
+        {
+          "label": "Sirio B",
+          "value": "nana bianca"
+        }
+      ],
+      "teachingObjective": "Confrontare Sirio e il Sole e leggere le temperature stellari.",
+      "teachingObjectives": [
+        "Confrontare Sirio e il Sole e leggere le temperature stellari."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-25.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-25.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "star",
+        "target": "Sirius",
+        "label": "Sirio, Sole, Terra",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Confronta i diametri di Sirio e del Sole. Usa lo zoom per trovare la Terra. Leggi le temperature nella scheda."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "Il bagliore non fa parte del raggio fisico.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 26,
+      "sourceSlide": 26,
+      "heading": "I pianeti a confronto",
+      "section": "Approfondimento",
+      "originalSlideText": "Terra\n\nMarte\n\nVenere\n\nTerra\n\nNettuno\n\nUrano\n\nPianeti giganti Saturno e Giove\n\nGiove\n\nSole",
+      "slideText": "Terra\n\nMarte\n\nVenere\n\nTerra\n\nNettuno\n\nUrano\n\nPianeti giganti Saturno e Giove\n\nGiove\n\nSole",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "pianeti rocciosi",
+        "giganti gassosi",
+        "giganti ghiacciati",
+        "Plutone"
+      ],
+      "numericalValues": [
+        {
+          "label": "Giove",
+          "value": "11,2 R⊕"
+        },
+        {
+          "label": "Saturno",
+          "value": "9,45 R⊕"
+        },
+        {
+          "label": "Urano e Nettuno",
+          "value": "~4 R⊕"
+        },
+        {
+          "label": "Pianeti rocciosi",
+          "value": "< 1 R⊕"
+        }
+      ],
+      "teachingObjective": "Confrontare le dimensioni dei pianeti.",
+      "teachingObjectives": [
+        "Confrontare le dimensioni dei pianeti."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-26.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-26.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "solar",
+        "mode": "sun",
+        "distanceAU": 40,
+        "label": "Pianeti a confronto",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Seleziona un pianeta. Usa lo zoom per confrontare i giganti e i rocciosi. Ricorda: le distanze orbitali sono una scala diversa."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "Le distanze orbitali sono una scala diversa dalle dimensioni.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA/JPL Solar System Dynamics",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 27,
+      "sourceSlide": 27,
+      "heading": "Le stelle a confronto",
+      "section": "Approfondimento",
+      "originalSlideText": "Sole\n\nSirio\n\nSirio\n\nAldebaran\n\nBetelgeuse\n\nBetelgeuse\n\nVY Canis Majoris\n\nGiove",
+      "slideText": "Sole\n\nSirio\n\nSirio\n\nAldebaran\n\nBetelgeuse\n\nBetelgeuse\n\nVY Canis Majoris\n\nGiove",
+      "speakerNotes": "",
+      "notesPreserved": false,
+      "astronomicalObjects": [
+        "Sole",
+        "Sirio",
+        "Aldebaran",
+        "Betelgeuse",
+        "VY Canis Majoris",
+        "UY Scuti"
+      ],
+      "numericalValues": [
+        {
+          "label": "Sole",
+          "value": "1 R☉"
+        },
+        {
+          "label": "Sirio",
+          "value": "1,71 R☉"
+        },
+        {
+          "label": "Aldebaran",
+          "value": "~44 R☉"
+        },
+        {
+          "label": "Betelgeuse",
+          "value": "~700 R☉"
+        }
+      ],
+      "teachingObjective": "Confrontare le dimensioni delle stelle e riconoscere le incertezze.",
+      "teachingObjectives": [
+        "Confrontare le dimensioni delle stelle e riconoscere le incertezze."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-27.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-27.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "star",
+        "target": "Betelgeuse",
+        "label": "Stelle a confronto",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Usa lo zoom: il Sole diventa un punto. Seleziona una stella per il raggio. Leggi la nota scientifica sulle incertezze."
+      },
+      "scientificVerificationStatus": "uncertain",
+      "scientificNote": "I raggi stellari sono stime; il Sole è una stella media.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "HYG Database v4.1 · Astronomy Nexus (CC BY-SA 4.0)",
+        "Gaia DR3 / Healy et al. 2023"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 28,
+      "sourceSlide": 28,
+      "heading": "VY Canis Majoris",
+      "section": "Approfondimento",
+      "originalSlideText": "VY Canis Majoris\n\nSole",
+      "slideText": "VY Canis Majoris\n\nSole",
+      "speakerNotes": "VY Canis Majoris. Situata nella costellazione del Cane Maggiore a quasi 4000 anni luce dal Sole. È una delle stelle più grandi conosciute (ipergigante rossa), con un raggio pari a circa 1420 volte il raggio solare (696000 km) e, in virtù delle sue dimensioni, una delle più luminose della Via Lattea.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "VY Canis Majoris",
+        "Sole",
+        "Giove"
+      ],
+      "numericalValues": [
+        {
+          "label": "Distanza",
+          "value": "~3.820 al"
+        },
+        {
+          "label": "Raggio",
+          "value": "~1.420 R☉"
+        },
+        {
+          "label": "Raggio in UA",
+          "value": "~6,6 UA"
+        },
+        {
+          "label": "Tipo",
+          "value": "ipergigante rossa"
+        }
+      ],
+      "teachingObjective": "Conoscere VY Canis Majoris e la sua scala rispetto al Sistema Solare.",
+      "teachingObjectives": [
+        "Conoscere VY Canis Majoris e la sua scala rispetto al Sistema Solare."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-28.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-28.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "curated",
+        "target": "vy-cma",
+        "label": "VY Canis Majoris",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Confronta il raggio con l'orbita di Giove. Usa lo zoom per trovare il Sole. Apri la stella in 3D nella modalità atlante."
+      },
+      "scientificVerificationStatus": "approximate",
+      "scientificNote": "Raggio ~1.420 ± 120 R☉; distanza ~3.820 al.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "Gaia DR3 / Healy et al. 2023"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 29,
+      "sourceSlide": 29,
+      "heading": "VY Canis Majoris, vista da Hubble",
+      "section": "Approfondimento",
+      "originalSlideText": "VY Canis Majoris",
+      "slideText": "VY Canis Majoris",
+      "speakerNotes": "La stella, circondata da un guscio di materia emessa dalla stessa, ripresa nel visibile dal Telescopio spaziale Hubble",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "VY Canis Majoris",
+        "involucro circumstellare"
+      ],
+      "numericalValues": [
+        {
+          "label": "Osservatorio",
+          "value": "Hubble Space Telescope"
+        },
+        {
+          "label": "Struttura",
+          "value": "guscio circumstellare"
+        },
+        {
+          "label": "Fine prevista",
+          "value": "supernova"
+        }
+      ],
+      "teachingObjective": "Distinguere la fotosfera dal materiale circumstellare osservato da Hubble.",
+      "teachingObjectives": [
+        "Distinguere la fotosfera dal materiale circumstellare osservato da Hubble."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-29.png",
+        "assets/cosmos/images/vy-cma-hubble.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-29.png",
+        "assets/cosmos/images/vy-cma-hubble.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "curated",
+        "target": "vy-cma",
+        "label": "VY Canis Majoris · Hubble",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci il guscio circumstellare. Tocca gli hotspot per distinguere stella e polvere. Apri la stella in 3D nella modalità atlante."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "L'immagine Hubble riprodotta nella presentazione mostra il guscio di polvere.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / ESA / Hubble / STScI"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 30,
+      "sourceSlide": 30,
+      "heading": "La luce attorno a VY Canis Majoris",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "Altro mezzo di comparazione potrebbe essere il fatto che la luce, che impiega poco più di un secondo dalla Terra alla Luna, avrebbe bisogno di quasi 8 ore per fare un giro completo attorno alla stella.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "VY Canis Majoris",
+        "Sole",
+        "velocità della luce"
+      ],
+      "numericalValues": [
+        {
+          "label": "Raggio",
+          "value": "~1.420 R☉ · 6,6 UA"
+        },
+        {
+          "label": "Circonferenza",
+          "value": "~41,5 UA"
+        },
+        {
+          "label": "Tempo della luce (calcolato)",
+          "value": "~5,8 ore"
+        },
+        {
+          "label": "Valore della presentazione",
+          "value": "~8 ore (stima storica)"
+        }
+      ],
+      "teachingObjective": "Calcolare il tempo della luce attorno a una stella e spiegare le assunzioni.",
+      "teachingObjectives": [
+        "Calcolare il tempo della luce attorno a una stella e spiegare le assunzioni."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-30.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-30.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "curated",
+        "target": "vy-cma",
+        "label": "VY Canis Majoris · luce",
+        "primary": true
+      },
+      "plannedComponent": "Confronto dimensionale interattivo in scala",
+      "optionalInteractiveComponent": "Confronto dimensionale interattivo in scala",
+      "plannedInteractiveComponent": {
+        "type": "scale",
+        "label": "Confronto dimensionale interattivo in scala",
+        "interaction": "Avvia il raggio di luce attorno alla stella. Leggi il tempo e il confronto con il Sole. Cambia oggetto e osserva come cambia la circonferenza."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "Con 1.420 R☉ il tempo è ~5,8 h; la presentazione indica ~8 h, coerente con stime storiche maggiori.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "Gaia DR3 / Healy et al. 2023",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 31,
+      "sourceSlide": 31,
+      "heading": "UY Scuti",
+      "section": "Approfondimento",
+      "originalSlideText": "",
+      "slideText": "",
+      "speakerNotes": "Stella ipergigante rossa situata nella costellazione dello Scudo (Via Lattea) distante circa 9460 anni luce dal nostro pianeta. Al 2018 si trattava della più grande stella conosciuta, con un raggio medio 1708 volte quello del Sole equivalente a quasi 8 unità astronomiche.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "UY Scuti",
+        "Sole"
+      ],
+      "numericalValues": [
+        {
+          "label": "Distanza (presentazione 2018)",
+          "value": "9.460 al"
+        },
+        {
+          "label": "Distanza (stima moderna)",
+          "value": "~5.900 al"
+        },
+        {
+          "label": "Raggio (2018 / moderna)",
+          "value": "1.708 / ~909 R☉"
+        },
+        {
+          "label": "Costellazione",
+          "value": "Scutum"
+        }
+      ],
+      "teachingObjective": "Discutere le stime di raggio di UY Scuti e il carattere storico del primato.",
+      "teachingObjectives": [
+        "Discutere le stime di raggio di UY Scuti e il carattere storico del primato."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-31.png",
+        "assets/cosmos/images/uy-scuti.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-31.png",
+        "assets/cosmos/images/uy-scuti.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "curated",
+        "target": "uy-sct",
+        "label": "UY Scuti",
+        "primary": true
+      },
+      "plannedComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "optionalInteractiveComponent": "Visualizzatore d'immagine con zoom, pan e hotspot",
+      "plannedInteractiveComponent": {
+        "type": "image",
+        "label": "Visualizzatore d'immagine con zoom, pan e hotspot",
+        "interaction": "Ingrandisci il confronto con il Sole. Leggi la nota scientifica sui valori aggiornati. Apri la stella in 3D nella modalità atlante."
+      },
+      "scientificVerificationStatus": "updated",
+      "scientificNote": "La presentazione (2018) indica 1.708 R☉ e 9.460 al; stime moderne ~909 R☉ e ~5.900 al. Stephenson 2-18 è spesso indicata come più grande.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "Gaia DR3 / Healy et al. 2023"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    },
+    {
+      "slide": 32,
+      "sourceSlide": 32,
+      "heading": "Il calendario cosmico",
+      "section": "Approfondimento",
+      "originalSlideText": "Storia dell’Universo\n\nFormazione della Terra\n\nstoria di Homo sapiens\n\nsi sviluppa il 99% della tecnologia che utilizziamo oggi\n\nultimo millimetro",
+      "slideText": "Storia dell’Universo\n\nFormazione della Terra\n\nstoria di Homo sapiens\n\nsi sviluppa il 99% della tecnologia che utilizziamo oggi\n\nultimo millimetro",
+      "speakerNotes": "La centesima parte di questo millimetro equivale agli ultimi 300 000 anni e quindi al tempo in cui esiste Homo sapiens sulla Terra.",
+      "notesPreserved": true,
+      "astronomicalObjects": [
+        "Big Bang",
+        "Terra",
+        "Homo sapiens",
+        "tempo cosmico"
+      ],
+      "numericalValues": [
+        {
+          "label": "Età dell'Universo",
+          "value": "13,8 miliardi di anni"
+        },
+        {
+          "label": "Età della Terra",
+          "value": "~4,54 miliardi di anni"
+        },
+        {
+          "label": "Homo sapiens",
+          "value": "~300.000 anni"
+        },
+        {
+          "label": "Ultimo millimetro",
+          "value": "gli ultimi 300.000 anni"
+        }
+      ],
+      "teachingObjective": "Collocare la storia della Terra e dell'umanità nel tempo cosmico.",
+      "teachingObjectives": [
+        "Collocare la storia della Terra e dell'umanità nel tempo cosmico."
+      ],
+      "originalImageReferences": [
+        "assets/presentation/slides/slide-32.png"
+      ],
+      "imageReferences": [
+        "assets/presentation/slides/slide-32.png"
+      ],
+      "primaryMedium": "3D universe",
+      "threeDScene": {
+        "domain": "deep",
+        "mode": "observable",
+        "label": "Universo · tempo cosmico",
+        "primary": true
+      },
+      "plannedComponent": "Linea del tempo interattiva",
+      "optionalInteractiveComponent": "Linea del tempo interattiva",
+      "plannedInteractiveComponent": {
+        "type": "timeline",
+        "label": "Linea del tempo interattiva",
+        "interaction": "Passa dalla scala completa al dettaglio degli ultimi 100 milioni di anni. Attiva il calendario cosmico e leggi le date. Confronta la storia umana con l'età dell'Universo."
+      },
+      "scientificVerificationStatus": "verified",
+      "scientificNote": "Il calendario cosmico è una scala didattica; l'analogia del millimetro è approssimata.",
+      "sourceCitations": [
+        "Presentazione del docente · Geografia astronomica UDA 2 e 3",
+        "NASA / JPL-Caltech",
+        "IAU"
+      ],
+      "completionStatus": "implemented",
+      "hasOriginalSlideAccess": true
+    }
+  ]
+}

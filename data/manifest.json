@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-11-06T18:39:08.070Z",
+  "cosmology": {
+    "H0": 70,
+    "OmegaM": 0.3,
+    "OmegaL": 0.7,
+    "note": "Flat ΛCDM used for redshift-derived comoving distances."
+  },
+  "checks": {
+    "comoving_z_0_1": 418.4544876277077,
+    "comoving_z_1": 3303.828805879228,
+    "lookback_z_1_Gyr": 7.715337003079937
+  },
+  "assets": {
+    "stars": {
+      "file": "stars.bin",
+      "index": "stars_index.json",
+      "count": 119625
+    },
+    "exoplanets": {
+      "file": "exoplanets.json",
+      "systems": 4857,
+      "planets": 6464
+    },
+    "galaxies": {
+      "file": "sdss_galaxies.bin",
+      "count": 52500
+    },
+    "textures": {
+      "starMap": "NASA/Goddard Deep Star Maps 2020 (celestial, RA increasing left)"
+    }
+  },
+  "sources": [
+    {
+      "name": "HYG Database v4.1",
+      "authors": "David Nash / Astronomy Nexus (compiled from Hipparcos, Yale BSC, Gliese, Gaia DR2 where available)",
+      "url": "https://codeberg.org/astronexus/hyg",
+      "license": "CC BY-SA 4.0",
+      "retrievedAt": "2026-11-06",
+      "note": "Distances from Hipparcos parallax; uncertain for distant stars. Temperatures shown are estimates derived from B−V colour when not in the source catalogue."
+    },
+    {
+      "name": "NASA Exoplanet Archive — Planetary Systems Composite Parameters",
+      "table": "pscomppars",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/",
+      "service": "NASA Exoplanet Archive TAP",
+      "license": "NASA public data",
+      "retrievedAt": "2026-11-06",
+      "note": "Confirmed planets only. Missing parameters remain null. Values describe the planet as of the archive retrieval date."
+    },
+    {
+      "name": "Sloan Digital Sky Survey Data Release 18",
+      "table": "SpecObj",
+      "url": "https://skyserver.sdss.org/",
+      "license": "SDSS public data — attribution requested",
+      "retrievedAt": "2026-11-06",
+      "selection": "class = 'GALAXY', 0.004 ≤ z ≤ 0.15 (stratified bins); this build combines a 40,000-object low-redshift query with higher-redshift bins that completed successfully.",
+      "note": "Spectroscopic galaxy redshift sample. Coverage is the SDSS footprint and only part of the available redshift range; it is a shallow, incomplete slice, not a complete sky map. Positions are flat-ΛCDM comoving distances (H₀=70, Ωm=0.3), converted from RA/Dec."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+import { chromium } from 'playwright-core';
+const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1280,height:800}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&!m.text().includes('GL Driver'))errors.push(m.text());});
+await page.goto('https://cosmos-atlante.pages.dev/?quality=low',{waitUntil:'domcontentloaded',timeout:120000});
+await page.waitForFunction(()=>window.EON?.ready,null,{timeout:120000});
+await page.waitForTimeout(1000);
+console.log('live landing',await page.evaluate(()=>({title:document.title,root:!document.querySelector('#cosmos-root')?.hidden,landing:!document.querySelector('.cs-landing')?.hidden,cta:document.querySelector('.cs-landing-actions .cs-primary')?.textContent.trim(),cover:document.querySelector('.cs-cover img')?.naturalWidth,hud:getComputedStyle(document.querySelector('#hud')).display,map:!!document.querySelector('#cosmos-root')})));
+await page.click('[data-cs="start"]');await page.waitForTimeout(1200);
+console.log('live step',await page.evaluate(()=>({title:document.querySelector('#cs-panel-title')?.textContent,stage:document.querySelector('#cs-stage-label')?.textContent,img:document.querySelector('#cs-stage-body img')?.naturalWidth,counter:document.querySelector('#cs-bottom-count')?.textContent,domain:EON.domain})));
+await page.click('[data-cs="next"]').catch(async()=>{await page.locator('.cs-bottombar [data-cs="next"]').click();});
+await page.waitForTimeout(800);
+console.log('live step2',await page.evaluate(()=>({title:document.querySelector('#cs-panel-title')?.textContent,counter:document.querySelector('#cs-bottom-count')?.textContent})));
+console.log('errors',errors.slice(0,8));
+await browser.close();

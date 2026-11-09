@@ -1,0 +1,16 @@
+import { chromium } from 'playwright-core';
+const browser = await chromium.launch({ executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless:true, args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport:{width:1280,height:800} });
+const errs=[]; page.on('pageerror',e=>errs.push(e.message));
+await page.goto('http://127.0.0.1:5173/?quality=low',{waitUntil:'domcontentloaded'});
+await page.waitForFunction(()=>window.EON?.ready,null,{timeout:90000});
+await page.waitForFunction(()=>window.EON?.catalogsReady,null,{timeout:90000}).catch(()=>{});
+await page.waitForTimeout(2500);
+await page.click('#search-input'); await page.fill('#search-input','Saturn'); await page.waitForSelector('.search-result'); await page.keyboard.press('Enter');
+await page.waitForFunction(()=>EON.domain==='solar',null,{timeout:60000});
+await page.waitForFunction(()=>EON.solar?.rig?.distance < 0.01, null, {timeout:60000}).catch(()=>{});
+await page.waitForTimeout(2500);
+const s=await page.evaluate(()=>({dist:EON.solar.rig.distance, target:EON.solar.rig.targetDistance, cap:document.querySelector('#scale-caption').textContent, val:document.querySelector('#scale-value').textContent, fov:document.querySelector('#scale-value').textContent}));
+console.log(s, errs);
+await page.screenshot({path:'screenshots/final-02-saturn.png'});
+await browser.close();

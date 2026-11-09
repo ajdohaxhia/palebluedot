@@ -1,0 +1,12 @@
+import { chromium } from 'playwright-core';
+const browser = await chromium.launch({ executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless:true, args:['--no-sandbox','--use-angle=swiftshader','--enable-unsafe-swiftshader'] });
+const page = await browser.newPage({ viewport:{width:1000,height:700} });
+const errs=[]; page.on('pageerror',e=>errs.push(e.message));
+await page.route('**/*', route => new URL(route.request().url()).pathname.startsWith('/data/') ? route.abort() : route.continue());
+await page.goto('http://127.0.0.1:5173/?quality=low',{waitUntil:'domcontentloaded'});
+await page.waitForFunction(()=>window.EON?.ready,null,{timeout:90000}).catch(()=>{});
+await page.waitForTimeout(4000);
+const s=await page.evaluate(()=>({eon:typeof window.EON, ready:window.EON?.ready, cats:window.EON?.catalogsReady, earth:!!window.EON?.earth, toast:document.querySelector('#toast')?.textContent, search:document.querySelector('#search-input')?.placeholder}));
+console.log(s, errs);
+await page.screenshot({path:'screenshots/qa-offline.png'});
+await browser.close();
