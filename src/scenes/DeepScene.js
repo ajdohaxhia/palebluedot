@@ -736,7 +736,8 @@ export class DeepScene {
     const textureFor = (type) => {
       const key = GALAXY_PHOTOS[type] ? type : 'spiral';
       if (!typeTexture.has(key)) {
-        const size = 1024;
+        // 1280 px matches the largest source photo, so the photo is drawn without downscaling.
+        const size = 1280;
         const canvas = document.createElement('canvas');
         canvas.width = size;
         canvas.height = size;

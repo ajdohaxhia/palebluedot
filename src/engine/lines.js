@@ -8,6 +8,8 @@ import { LineSegmentsGeometry } from 'three/addons/lines/LineSegmentsGeometry.js
 // Screen-space ("fat") lines. Unlike THREE.Line, these keep a visible pixel width
 // on every device and at every zoom level.
 const materials = new Set();
+// Multiplies every line width so orbit paths and grids stay readable on large and high-DPI screens.
+const LINE_WIDTH_SCALE = 1.6;
 let viewWidth = window.innerWidth || 1;
 let viewHeight = window.innerHeight || 1;
 
@@ -37,7 +39,7 @@ export function createLineSegments(points, {
 
   const material = new LineMaterial({
     color: new THREE.Color(color),
-    linewidth: width,
+    linewidth: width * LINE_WIDTH_SCALE,
     transparent: true,
     opacity,
     depthWrite: false,
@@ -65,7 +67,7 @@ export function createLine(points, {
 
   const material = new LineMaterial({
     color: new THREE.Color(color),
-    linewidth: width,
+    linewidth: width * LINE_WIDTH_SCALE,
     transparent: true,
     opacity,
     depthWrite: false,
