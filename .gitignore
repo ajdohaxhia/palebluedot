@@ -6,3 +6,18 @@ dist/
 screenshots/qa-*.png
 
 .wrangler/
+
+.DS_Store
+
+# Local/alternate texture references, not used by the app.
+assets/textures/galaxies/hubble-udf-hr.jpg
+assets/textures/galaxies/messier51-4k.jpg
+assets/textures/galaxies/messier51-full.jpg
+
+# Local PDF/export artifact and QA captures.
+presentazione.pdf
+screenshots/cosmos-presentation-clean.png
+screenshots/cosmos-presentation-live.png
+screenshots/cosmos-presentation-select.png
+screenshots/cosmos-presentation-selected.png
+screenshots/cosmos-slide-fullscreen.png

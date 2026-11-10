@@ -613,40 +613,11 @@ export class DeepScene {
     this.scene.add(this.milkyWay);
 
     const tex = makeGalaxyTexture('barred', 9001, 'warm');
-    // Real Milky Way photo for the far-field sprite. The procedural texture stays visible while the photo loads and if it fails.
-    const mwPhotoSize = 1280;
-    const mwPhotoCanvas = document.createElement('canvas');
-    mwPhotoCanvas.width = mwPhotoSize;
-    mwPhotoCanvas.height = mwPhotoSize;
-    {
-      const ctx = mwPhotoCanvas.getContext('2d');
-      ctx.drawImage(tex.image, 0, 0, mwPhotoSize, mwPhotoSize);
-    }
-    const mwPhotoTex = new THREE.CanvasTexture(mwPhotoCanvas);
-    mwPhotoTex.colorSpace = THREE.SRGBColorSpace;
-    mwPhotoTex.anisotropy = 8;
-    new THREE.ImageLoader().load(
-      'assets/textures/galaxies/milkyway-eso-6k.jpg',
-      (img) => {
-        const ctx = mwPhotoCanvas.getContext('2d');
-        const fit = Math.max(mwPhotoSize / img.width, mwPhotoSize / img.height);
-        const w = img.width * fit;
-        const h = img.height * fit;
-        ctx.fillStyle = '#000';
-        ctx.fillRect(0, 0, mwPhotoSize, mwPhotoSize);
-        ctx.drawImage(img, (mwPhotoSize - w) / 2, (mwPhotoSize - h) / 2, w, h);
-        const fade = ctx.createRadialGradient(mwPhotoSize / 2, mwPhotoSize / 2, mwPhotoSize * 0.3, mwPhotoSize / 2, mwPhotoSize / 2, mwPhotoSize * 0.5);
-        fade.addColorStop(0, 'rgba(0,0,0,0)');
-        fade.addColorStop(1, 'rgba(0,0,0,1)');
-        ctx.fillStyle = fade;
-        ctx.fillRect(0, 0, mwPhotoSize, mwPhotoSize);
-        mwPhotoTex.needsUpdate = true;
-      },
-      undefined,
-      () => console.warn('Milky Way photo failed to load, using procedural texture:', 'assets/textures/galaxies/milkyway-eso-6k.jpg'),
-    );
+    // Far-field sprite: the same procedural barred texture as the disk. The ESO
+    // all-sky panorama tested here is a band, not a top-down galaxy, so it is
+    // intentionally not used.
     this.mwSprite = new THREE.Sprite(new THREE.SpriteMaterial({
-      map: mwPhotoTex,
+      map: tex,
       transparent: true,
       opacity: 0.0,
       depthWrite: false,
