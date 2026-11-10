@@ -1170,7 +1170,7 @@ body.cosmos-mode { background: #03060a; overflow: hidden; }
 /* Floating Stage Camera Controls */
 .cs-stage-cam-tools {
   position: absolute;
-  top: 18px;
+  top: 56px;
   right: 426px;
   display: flex;
   align-items: center;
@@ -2927,7 +2927,7 @@ body.cosmos-free-atlas #layers-button:hover {
 
 .cosmos-free-return {
   position: fixed;
-  top: 18px;
+  bottom: 168px;
   left: 50%;
   transform: translateX(-50%);
   display: inline-flex;
@@ -2965,7 +2965,7 @@ body.cosmos-free-atlas #layers-button:hover {
 /* Free Atlas Floating Quick Bar */
 .cs-free-quickbar {
   position: fixed;
-  bottom: 24px;
+  bottom: 116px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;

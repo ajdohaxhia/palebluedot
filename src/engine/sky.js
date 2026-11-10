@@ -64,8 +64,10 @@ export class SkyDome {
       side: THREE.BackSide,
       depthWrite: false,
       depthTest: false,
-      transparent: true,
-      blending: THREE.AdditiveBlending,
+      // Must stay opaque: three.js draws transparent objects after opaque ones,
+      // which would paint the sky over the planets regardless of renderOrder.
+      // Opaque objects are sorted by renderOrder, so the dome draws first.
+      transparent: false,
     });
     this.mesh = new THREE.Mesh(this.geometry, this.material);
     this.mesh.frustumCulled = false;

@@ -175,7 +175,7 @@ async function boot() {
   setTimeout(() => {
     overlay.classList.add('is-hidden');
     APP.loadingDone = true;
-    if (APP.cosmos) APP.cosmos.showLanding();
+    if (APP.cosmos) APP.cosmos.start(0);
     else { maybeOpenIntro(); showGuidance(); }
   }, 650);
   requestAnimationFrame(loop);
@@ -273,6 +273,9 @@ function preloadSolar() {
 
 async function enterSolar({ targetId = null, distance = null, announce = false } = {}) {
   if (APP.domain === 'solar') {
+    // This early return can be reached after a preload/deactivate cycle:
+    // make sure the Solar rig and its labels are actually enabled.
+    APP.solar?.activate();
     if (targetId) APP.solar.focusObject(targetId);
     if (distance) APP.solar.rig.targetDistance = distance;
     return APP.solar;
@@ -485,7 +488,8 @@ async function showCosmosScene(scene) {
     if (scene.domain === "solar") {
       if (!APP.solar) await createSolarScene();
       if (token !== cosmosSceneToken) return;
-      if (APP.domain !== "solar") activateDomain("solar", APP.solar);
+      if (APP.domain !== "solar" || APP.activeScene !== APP.solar) activateDomain("solar", APP.solar);
+      else if (!APP.solar.rig.enabled) APP.solar.activate();
       APP.solar.onSelect = () => {};
       APP.solar.setScaleMode("educational");
       APP.solar.rig.follow = null;
@@ -657,6 +661,7 @@ function setupUI() {
   setupCameraTools();
   setupScaleRail();
   setupZoomHandoffs();
+  setupLabelWheelBridge();
   setupSearchShell();
   setupKeyboard();
   setupCoordinates();
@@ -2190,6 +2195,22 @@ async function navigateToScale(log) {
   updateDeepBreadcrumbs(APP.deep.focusLevel || APP.deep.getLevel());
   updateScaleUI();
   updateTimeUI();
+}
+
+/* The legacy/free atlas labels are DOM buttons above the canvas.
+   They keep pointer-events:auto so click selection still works, but that means
+   a wheel gesture over a label targets the label, not #scene-canvas. Forward
+   those wheel events to the active rig instead of letting the zoom gesture die. */
+function setupLabelWheelBridge() {
+  document.addEventListener('wheel', event => {
+    if (!APP.cosmos?.freeAtlas) return;
+    const target = event.target;
+    if (!(target instanceof Element) || !target.closest('.sky-label')) return;
+    const rig = APP.activeScene?.rig;
+    if (!rig?.enabled) return;
+    event.preventDefault();
+    rig._onWheel(event);
+  }, { passive: false, capture: true });
 }
 
 /* Continuous zoom: scrolling past a scene's zoom limit moves to the next scale. */
