@@ -483,7 +483,17 @@ function handleCosmosPick(info, domain) {
 
 function setAtlasPicking(enabled) {
   for (const scene of [APP.earth, APP.solar, APP.deep, APP.exo]) {
-    if (scene?.rig) scene.rig.noHandoff = enabled;
+    const rig = scene?.rig;
+    if (!rig) continue;
+    if (enabled && !rig.freeZoom) rig.savedLimits = [rig.minDistance, rig.maxDistance];
+    rig.noHandoff = enabled;
+    rig.freeZoom = enabled;
+    if (enabled) {
+      rig.setLimits(rig.minDistance, rig.maxDistance);
+    } else if (rig.savedLimits) {
+      rig.setLimits(rig.savedLimits[0], rig.savedLimits[1]);
+      rig.savedLimits = null;
+    }
   }
   if (APP.earth) APP.earth.onSelect = enabled ? handleSelection : cosmosPick("earth");
   if (APP.solar) APP.solar.onSelect = enabled ? handleSolarSelection : cosmosPick("solar");

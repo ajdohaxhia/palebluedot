@@ -57,6 +57,7 @@ export class OrbitRig {
     this.autoRotate = false;
     this.autoRotateSpeed = 0.034;
     this.freeFlight = false;
+    this.freeZoom = false;
     this.follow = null;
     this.onPick = onPick;
     this.onHover = onHover;
@@ -82,6 +83,11 @@ export class OrbitRig {
   }
 
   setLimits(minDistance, maxDistance, minPitch = this.minPitch, maxPitch = this.maxPitch) {
+    // Free atlas: no scale limit, so the wheel can reach any distance.
+    if (this.freeZoom) {
+      minDistance = 1e-12;
+      maxDistance = 1e12;
+    }
     this.minDistance = minDistance;
     this.maxDistance = maxDistance;
     this.minPitch = minPitch;

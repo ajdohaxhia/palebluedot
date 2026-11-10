@@ -1199,12 +1199,12 @@ export class SolarScene {
     const d = this.camera.position.distanceTo(worldPos);
     const wpp = 2 * Math.tan(this.camera.fov * DEG / 2) * d / Math.max(1, screenHeight);
     const physicalPx = (body.visualRadiusAU / Math.max(wpp, 1e-12)) * 2;
-    const show = this.rig.distance > 0.002 || physicalPx < 26;
-    body.beacon.visible = show;
+    // Planets stay marked at every zoom level.
+    body.beacon.visible = true;
     body.beacon.position.copy(worldPos);
     const scale = Math.max(body.visualRadiusAU * 2.6, wpp * 15);
     body.beacon.scale.setScalar(scale);
-    body.beacon.material.opacity = show ? Math.min(0.95, Math.max(0.2, 1 - physicalPx / 55)) : 0;
+    body.beacon.material.opacity = Math.min(0.95, Math.max(0.35, 1 - physicalPx / 55));
   }
 
   getScaleReport() {
