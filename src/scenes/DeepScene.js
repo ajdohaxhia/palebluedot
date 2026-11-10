@@ -15,6 +15,10 @@ import { comovingDistanceMpc, lookbackGyr, MPC_PER_MLY } from '../astronomy/cosm
 const DEG = Math.PI / 180;
 const LY_PER_MPC = 3.261563777e6;
 const KPC_TO_MPC = 1e-3;
+// One zoom range for every focus method, so the camera can move continuously
+// from a single star (2e-10 Mpc) out to the observable universe (30000 Mpc).
+const DEEP_MIN_DISTANCE = 2e-10;
+const DEEP_MAX_DISTANCE = 30000;
 
 const starVertex = /* glsl */`
   uniform float uPixelRatio;
@@ -609,8 +613,40 @@ export class DeepScene {
     this.scene.add(this.milkyWay);
 
     const tex = makeGalaxyTexture('barred', 9001, 'warm');
+    // Real Milky Way photo for the far-field sprite. The procedural texture stays visible while the photo loads and if it fails.
+    const mwPhotoSize = 1280;
+    const mwPhotoCanvas = document.createElement('canvas');
+    mwPhotoCanvas.width = mwPhotoSize;
+    mwPhotoCanvas.height = mwPhotoSize;
+    {
+      const ctx = mwPhotoCanvas.getContext('2d');
+      ctx.drawImage(tex.image, 0, 0, mwPhotoSize, mwPhotoSize);
+    }
+    const mwPhotoTex = new THREE.CanvasTexture(mwPhotoCanvas);
+    mwPhotoTex.colorSpace = THREE.SRGBColorSpace;
+    mwPhotoTex.anisotropy = 8;
+    new THREE.ImageLoader().load(
+      'assets/textures/galaxies/milkyway-eso-6k.jpg',
+      (img) => {
+        const ctx = mwPhotoCanvas.getContext('2d');
+        const fit = Math.max(mwPhotoSize / img.width, mwPhotoSize / img.height);
+        const w = img.width * fit;
+        const h = img.height * fit;
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, mwPhotoSize, mwPhotoSize);
+        ctx.drawImage(img, (mwPhotoSize - w) / 2, (mwPhotoSize - h) / 2, w, h);
+        const fade = ctx.createRadialGradient(mwPhotoSize / 2, mwPhotoSize / 2, mwPhotoSize * 0.3, mwPhotoSize / 2, mwPhotoSize / 2, mwPhotoSize * 0.5);
+        fade.addColorStop(0, 'rgba(0,0,0,0)');
+        fade.addColorStop(1, 'rgba(0,0,0,1)');
+        ctx.fillStyle = fade;
+        ctx.fillRect(0, 0, mwPhotoSize, mwPhotoSize);
+        mwPhotoTex.needsUpdate = true;
+      },
+      undefined,
+      () => console.warn('Milky Way photo failed to load, using procedural texture:', 'assets/textures/galaxies/milkyway-eso-6k.jpg'),
+    );
     this.mwSprite = new THREE.Sprite(new THREE.SpriteMaterial({
-      map: tex,
+      map: mwPhotoTex,
       transparent: true,
       opacity: 0.0,
       depthWrite: false,
@@ -1187,7 +1223,7 @@ export class DeepScene {
     }
     let dist = Math.max(1e-9, Math.min(30000, dMpc));
     if (this.focusLevel === 'local') dist = Math.min(dist, Math.max(1.35, dist * 0.62));
-    this.rig.setLimits(Math.max(2e-10, dist * 1e-6), 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(anchor, dist, {
       duration: animate && !this.getSettings()?.reducedMotion ? 1.35 : 0,
@@ -1201,14 +1237,14 @@ export class DeepScene {
     const world = star.world || this.catalogs.starWorld(star.i);
     if (!world) return;
     const target = new THREE.Vector3(world.x, world.y, world.z);
-    this.rig.setLimits(2e-10, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.focusOn(target, 1.2e-6, { duration: opts.immediate ? 0 : 1.7, yaw: this.rig.yaw, pitch: this.rig.pitch });
     this.focusLevel = 'stars';
     this.onFocusChange?.({ level: 'stars', star });
   }
 
   focusSun() {
-    this.rig.setLimits(2e-10, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.focusLevel = 'stars';
     this.rig.focusOn(new THREE.Vector3(SUN_SCENE_MPC.x, SUN_SCENE_MPC.y, SUN_SCENE_MPC.z), 1e-5, {
@@ -1218,7 +1254,7 @@ export class DeepScene {
   }
 
   focusMilkyWay(opts = {}) {
-    this.rig.setLimits(1e-7, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(new THREE.Vector3(0, 0, 0), 0.048, {
       duration: opts.immediate ? 0 : 1.8, yaw: 0.55, pitch: 0.92,
@@ -1238,7 +1274,7 @@ export class DeepScene {
     const yaw = Math.atan2(view.x, view.z);
     const pitch = Math.max(0.22, Math.min(1.1, Math.asin(view.y)));
     this.rig._tweens = [];
-    this.rig.setLimits(1e-5, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focus.set(this.localGroupAnchor.x, this.localGroupAnchor.y, this.localGroupAnchor.z);
     this.rig.targetFocus.copy(this.rig.focus);
@@ -1254,7 +1290,7 @@ export class DeepScene {
     if (!g || !g.world) return;
     const target = new THREE.Vector3(g.world.x, g.world.y, g.world.z);
     const dist = Math.max(0.00003, (g.diameterKpc || 10) * KPC_TO_MPC * 3.4);
-    this.rig.setLimits(Math.min(dist * 0.1, 0.00003), 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.focusOn(target, dist, { duration: opts.immediate ? 0 : 1.7, yaw: 0.56, pitch: 0.42 });
     this.focusLevel = 'local';
     this.onFocusChange?.({ level: 'local', galaxy: g });
@@ -1264,14 +1300,14 @@ export class DeepScene {
     if (!c || !c.world) return;
     const target = new THREE.Vector3(c.world.x, c.world.y, c.world.z);
     const size = Math.max(1, c.diameterMpc || c.extentMpc || 2);
-    this.rig.setLimits(1e-5, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.focusOn(target, size * 3.0, { duration: opts.immediate ? 0 : 1.7, yaw: 0.5, pitch: 0.45 });
     this.focusLevel = 'cosmic';
     this.onFocusChange?.({ level: 'cosmic', cluster: c });
   }
 
   focusWeb(opts = {}) {
-    this.rig.setLimits(1e-5, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(new THREE.Vector3(0, 0, 0), 240, {
       duration: opts.immediate ? 0 : 1.8, yaw: 0.62, pitch: 0.42,
@@ -1281,7 +1317,7 @@ export class DeepScene {
   }
 
   focusObservable(opts = {}) {
-    this.rig.setLimits(1, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(new THREE.Vector3(0, 0, 0), 17000, {
       duration: opts.immediate ? 0 : 2.2, yaw: 0.62, pitch: 0.36,
@@ -1294,7 +1330,7 @@ export class DeepScene {
     const c = this._curatedStars.find(x => x.id === id);
     if (!c) return;
     const target = new THREE.Vector3(c.world.x, c.world.y, c.world.z);
-    this.rig.setLimits(2e-10, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(target, 1.2e-6, {
       duration: opts.immediate ? 0 : 1.7, yaw: this.rig.yaw, pitch: this.rig.pitch,
@@ -1308,7 +1344,7 @@ export class DeepScene {
     if (!n) return;
     const world = n.world || raDecKpcToWorld(n.ra, n.dec, n.distKpc);
     const target = new THREE.Vector3(world.x, world.y, world.z);
-    this.rig.setLimits(2e-8, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.rig.focusOn(target, 2.2e-4, {
       duration: opts.immediate ? 0 : 1.7, yaw: 0.42, pitch: 0.24,
@@ -1318,7 +1354,7 @@ export class DeepScene {
   }
 
   resetView() {
-    this.rig.setLimits(2e-10, 30000);
+    this.rig.setLimits(DEEP_MIN_DISTANCE, DEEP_MAX_DISTANCE);
     this.rig.follow = null;
     this.focusLevel = 'stars';
     this.rig.focusOn(new THREE.Vector3(SUN_SCENE_MPC.x, SUN_SCENE_MPC.y, SUN_SCENE_MPC.z), 1e-5, {
