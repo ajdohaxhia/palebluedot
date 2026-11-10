@@ -175,7 +175,7 @@ async function boot() {
   setTimeout(() => {
     overlay.classList.add('is-hidden');
     APP.loadingDone = true;
-    if (APP.cosmos) APP.cosmos.start(0);
+    if (APP.cosmos) APP.cosmos.startPresentation(0);
     else { maybeOpenIntro(); showGuidance(); }
   }, 650);
   requestAnimationFrame(loop);
@@ -440,15 +440,55 @@ function updateDeepBreadcrumbs(level, info = null) {
 /* -------------------------------------------------------------------------- */
 let cosmosSceneToken = 0;
 
+const COSMOS_SELECTION_NAMES = {
+  sun: "Sole", mercury: "Mercurio", venus: "Venere", earth: "Terra", moon: "Luna",
+  mars: "Marte", jupiter: "Giove", saturn: "Saturno", uranus: "Urano", neptune: "Nettuno",
+  pluto: "Plutone", ceres: "Cerere", phobos: "Phobos", deimos: "Deimos",
+  io: "Io", europa: "Europa", ganymede: "Ganimede", callisto: "Callisto",
+  titan: "Titano", enceladus: "Encelado",
+};
+
+const COSMOS_SELECTION_KINDS = {
+  sun: "Stella", planet: "Pianeta", dwarf: "Pianeta nano", moon: "Luna",
+  star: "Stella", galaxy: "Galassia", cluster: "Ammasso", structure: "Struttura cosmica",
+  earth: "Terra", landmark: "Luogo", exoplanet: "Esopianeta", system: "Sistema planetario",
+  sdss: "Galassia", quasar: "Quasar", survey: "Oggetto",
+};
+
+function cosmosPick(domain) {
+  return info => handleCosmosPick(info, domain);
+}
+
+function handleCosmosPick(info, domain) {
+  if (!info) {
+    APP.cosmos?.clearSelection();
+    return;
+  }
+  const data = (typeof info === "object" && info.data) ? info.data : {};
+  const id = (typeof info === "object" ? info.id : null) || data.id || data.key || null;
+  const kindRaw = (typeof info === "object" ? info.kind : null) || "";
+  const name = COSMOS_SELECTION_NAMES[id]
+    || (domain === "deep" && kindRaw === "sun" ? "Sole" : null)
+    || data.name
+    || (typeof info === "object" ? info.name : null)
+    || data.title
+    || id
+    || "Oggetto";
+  APP.cosmos?.setSelection({
+    name,
+    kind: COSMOS_SELECTION_KINDS[kindRaw] || kindRaw || "Corpo celeste",
+    id,
+  });
+}
+
 function setAtlasPicking(enabled) {
-  const noop = () => {};
   for (const scene of [APP.earth, APP.solar, APP.deep, APP.exo]) {
     if (scene?.rig) scene.rig.noHandoff = enabled;
   }
-  if (APP.earth) APP.earth.onSelect = enabled ? handleSelection : noop;
-  if (APP.solar) APP.solar.onSelect = enabled ? handleSolarSelection : noop;
-  if (APP.deep) APP.deep.onSelect = enabled ? handleDeepSelection : noop;
-  if (APP.exo) APP.exo.onSelect = enabled ? handleExoSelection : noop;
+  if (APP.earth) APP.earth.onSelect = enabled ? handleSelection : cosmosPick("earth");
+  if (APP.solar) APP.solar.onSelect = enabled ? handleSolarSelection : cosmosPick("solar");
+  if (APP.deep) APP.deep.onSelect = enabled ? handleDeepSelection : cosmosPick("deep");
+  if (APP.exo) APP.exo.onSelect = enabled ? handleExoSelection : cosmosPick("exo");
 }
 
 function initCosmos() {
@@ -459,7 +499,7 @@ function initCosmos() {
     onExitFreeAtlas: () => setAtlasPicking(false),
   });
   window.COSMOS = APP.cosmos;
-  if (APP.earth) APP.earth.onSelect = () => {};
+  if (APP.earth) APP.earth.onSelect = cosmosPick("earth");
 }
 
 async function showCosmosScene(scene) {
@@ -469,7 +509,7 @@ async function showCosmosScene(scene) {
     if (scene.domain === "earth") {
       if (!APP.earth) return;
       if (APP.domain !== "earth") activateDomain("earth", APP.earth);
-      APP.earth.onSelect = () => {};
+      APP.earth.onSelect = cosmosPick("earth");
       APP.earth.rig.follow = null;
       if (scene.mode === "earth-moon") {
         APP.earth.rig.setLimits(1.035, 320);
@@ -490,7 +530,7 @@ async function showCosmosScene(scene) {
       if (token !== cosmosSceneToken) return;
       if (APP.domain !== "solar" || APP.activeScene !== APP.solar) activateDomain("solar", APP.solar);
       else if (!APP.solar.rig.enabled) APP.solar.activate();
-      APP.solar.onSelect = () => {};
+      APP.solar.onSelect = cosmosPick("solar");
       APP.solar.setScaleMode("educational");
       APP.solar.rig.follow = null;
       APP.solar.rig.setLimits(0.000006, 220);
@@ -505,7 +545,7 @@ async function showCosmosScene(scene) {
       if (!APP.deep) await createDeepScene();
       if (token !== cosmosSceneToken) return;
       if (APP.domain !== "deep") activateDomain("deep", APP.deep);
-      APP.deep.onSelect = () => {};
+      APP.deep.onSelect = cosmosPick("deep");
       APP.deep.rig.follow = null;
       switch (scene.mode) {
         case "stars":

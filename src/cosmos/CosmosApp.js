@@ -207,6 +207,7 @@ export class CosmosApp {
     this.cardOpen = false;
     this.presenting = false;
     this.freeAtlas = false;
+    this.freeAtlasWasPresenting = false;
     this.active = false;
     this.modal = null;
     this.stageInstance = null;
@@ -371,25 +372,8 @@ export class CosmosApp {
             <button class="cs-top-icon" type="button" data-cs="shortcuts" aria-label="Scorciatoie da tastiera" title="Scorciatoie (K)">⌨</button>
             <button class="cs-top-icon" type="button" data-cs="sources" aria-label="Fonti e crediti" title="Fonti e crediti"><svg class="cs-ico"><use href="#i-info"/></svg></button>
             <button class="cs-top-icon" type="button" data-cs="fullscreen" aria-label="Schermo intero" title="Schermo intero (F)"><svg class="cs-ico"><use href="#i-expand"/></svg></button>
-            <button class="cs-top-icon cs-mobile-only" type="button" data-cs="nav" aria-label="Apri l'indice delle 32 tappe">☰</button>
           </nav>
         </header>
-
-        <aside class="cs-nav" aria-label="Percorso delle 32 tappe">
-          <div class="cs-nav-head">
-            <div>
-              <span class="cs-kicker">Indice tappe</span>
-              <span class="cs-nav-progress-meta" id="cs-nav-progress-meta">32 tappe</span>
-            </div>
-            <button class="cs-close-nav cs-mobile-only" type="button" data-cs="nav-close" aria-label="Chiudi indice">×</button>
-          </div>
-          <div class="cs-nav-search-wrap">
-            <svg class="cs-ico-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            <input type="search" class="cs-nav-search" id="cs-nav-search" placeholder="Cerca tappe o corpi..." autocomplete="off" spellcheck="false" />
-          </div>
-          <div class="cs-nav-scroll" id="cs-nav-scroll"></div>
-        </aside>
-        <button class="cs-nav-scrim" type="button" data-cs="nav-close" aria-label="Chiudi indice"></button>
 
         <main class="cs-stage" id="cs-main-stage">
           <div class="cs-stage-scrim" aria-hidden="true"></div>
@@ -432,55 +416,25 @@ export class CosmosApp {
               <div class="cs-present-actions">
                 <button type="button" data-cs="atlas" title="Scegli una tappa">Tappe</button>
                 <button type="button" data-cs="slide" title="Apri la slide originale">Slide</button>
+                <button type="button" data-cs="lim" title="Modalità LIM / Aula">LIM</button>
                 <button type="button" data-cs="present-exit" aria-label="Esci dalla presentazione">×</button>
               </div>
             </div>
             <div class="cs-present-bottom">
+              <div class="cs-present-selection" id="cs-present-selection" hidden>
+                <span class="cs-kicker">Selezione</span>
+                <b id="cs-present-selection-name"></b>
+                <span id="cs-present-selection-kind"></span>
+                <button type="button" data-cs="selection-clear" aria-label="Deseleziona l'oggetto">×</button>
+              </div>
               <button type="button" data-cs="prev" aria-label="Tappa precedente (←)">‹</button>
               <span id="cs-present-title"></span>
               <button type="button" data-cs="next" aria-label="Tappa successiva (→)">›</button>
-              <button type="button" data-cs="slide">Slide</button>
+              <button id="cs-present-tool" type="button" data-cs="stage-toggle" title="Apri lo strumento 2D della tappa">Strumento</button>
             </div>
           </div>
           <div class="cs-laser-dot" id="cs-laser-dot" hidden aria-hidden="true"></div>
         </main>
-
-        <aside class="cs-panel" aria-label="Spiegazione della tappa">
-          <div class="cs-panel-scroll">
-            <div class="cs-panel-header-bar">
-              <div class="cs-panel-kicker">
-                <span id="cs-panel-section">UDA 2</span>
-                <span id="cs-panel-count">Tappa 01 / 32</span>
-              </div>
-              <div class="cs-panel-controls">
-                <button class="cs-speech-btn" type="button" data-cs="speech" title="Ascolta narrazione vocale (Spazio)">
-                  <span class="cs-speech-ico">🔊</span>
-                  <span id="cs-speech-label">Ascolta</span>
-                </button>
-                <div class="cs-font-controls" title="Dimensione testo">
-                  <button type="button" data-cs="font-dec" aria-label="Riduci testo">A−</button>
-                  <button type="button" data-cs="font-inc" aria-label="Ingrandisci testo">A+</button>
-                </div>
-                <button class="cs-copy-btn" type="button" data-cs="copy-note" title="Copia appunti della tappa">📋</button>
-              </div>
-            </div>
-            <h1 id="cs-panel-title">Pale Blue Dot</h1>
-            <div class="cs-panel-kicker2" id="cs-panel-kicker">Voyager 1 · 1990</div>
-            <div class="cs-level-tabs" role="tablist" aria-label="Livello di spiegazione">
-              <button role="tab" data-cs="level" data-level="capire" aria-selected="true">Capire</button>
-              <button role="tab" data-cs="level" data-level="esplora" aria-selected="false">Esplora</button>
-              <button role="tab" data-cs="level" data-level="approfondisci" aria-selected="false">Approfondisci</button>
-            </div>
-            <div class="cs-panel-content" id="cs-panel-content"></div>
-            <div class="cs-panel-foot">
-              <button class="cs-slide-link" type="button" data-cs="slide">
-                <span id="cs-slide-ref">Slide originale 01</span>
-                <span>↗</span>
-              </button>
-              <button class="cs-panel-mini" type="button" data-cs="sources">Fonti e crediti</button>
-            </div>
-          </div>
-        </aside>
 
         <footer class="cs-bottombar">
           <div class="cs-bottom-meta">
@@ -579,14 +533,16 @@ export class CosmosApp {
     this.audio.playClick();
 
     switch (action) {
-      case "start": this.start(this.savedStep || 0); break;
+      case "start": this.startPresentation(0); break;
       case "section": this.start(Number(el.dataset.step) || 0); break;
       case "home": this.showLanding(); break;
-      case "nav": this.nav.classList.toggle("is-open"); break;
-      case "nav-close": this.nav.classList.remove("is-open"); break;
+      case "nav": this.nav?.classList.toggle("is-open"); break;
+      case "nav-close": this.nav?.classList.remove("is-open"); break;
       case "prev": this.go(Math.max(0, this.current - 1)); break;
       case "next": this.go(Math.min(this.steps.length - 1, this.current + 1)); break;
       case "slide": this.openSlide(this.current); break;
+      case "slide-prev": this.openSlide(Math.max(0, (this.slideIndex ?? this.current) - 1)); break;
+      case "slide-next": this.openSlide(Math.min(this.steps.length - 1, (this.slideIndex ?? this.current) + 1)); break;
       case "atlas": if (!this.active) this.start(this.savedStep || 0); this.openAtlas(); break;
       case "free-atlas": if (!this.active) this.start(this.savedStep || 0); this.enterFreeAtlas(); break;
       case "quiz": if (!this.active) this.start(this.savedStep || 0); this.openQuiz(); break;
@@ -601,6 +557,7 @@ export class CosmosApp {
       case "autoplay": this.toggleAutoplay(); break;
       case "laser": this.toggleLaser(); break;
       case "present": this.togglePresent(true); break;
+      case "selection-clear": this.clearSelection(); break;
       case "present-exit": this.togglePresent(false); break;
       case "fullscreen": this.toggleFullscreen(); break;
       case "level": this.setLevel(el.dataset.level); break;
@@ -609,7 +566,7 @@ export class CosmosApp {
       case "atlas-step":
         this.go(Number(el.dataset.step));
         this.closeModal();
-        this.nav.classList.remove("is-open");
+        this.nav?.classList.remove("is-open");
         break;
       case "cam-reset":
         window.dispatchEvent(new KeyboardEvent("keydown", { key: "r" }));
@@ -645,6 +602,7 @@ export class CosmosApp {
         const chip = cfg?.objectChips?.[Number(el.dataset.chip)];
         if (chip?.scene) this.onScene(chip.scene);
         this.setTarget(chip?.label || this.steps[this.current].title, el);
+        this.setSelection({ name: chip?.label || this.steps[this.current].title, kind: "Corpo celeste" });
         break;
       }
       case "motion": this.setMotion(!this.motionReduced); this.openSources(); break;
@@ -674,6 +632,16 @@ export class CosmosApp {
       return;
     }
     if (this.modal && !this.modal.hidden) {
+      if (this.slideOpen && e.key === "ArrowLeft") {
+        e.preventDefault();
+        this.openSlide(Math.max(0, this.slideIndex - 1));
+        return;
+      }
+      if (this.slideOpen && e.key === "ArrowRight") {
+        e.preventDefault();
+        this.openSlide(Math.min(this.steps.length - 1, this.slideIndex + 1));
+        return;
+      }
       if (e.key === "Escape") { e.preventDefault(); this.closeModal(); }
       return;
     }
@@ -727,13 +695,18 @@ export class CosmosApp {
     this.stopAutoplay();
     this.stopPresentTimer();
     this.speech.stop();
-    this.nav.classList.remove("is-open");
+    this.nav?.classList.remove("is-open");
     const start = $("[data-cs=start]", this.root);
     if (start) {
       start.innerHTML = this.savedStep > 0
         ? `Riprendi dalla tappa ${String(this.savedStep + 1).padStart(2, "0")} <span>→</span>`
         : `Inizia l'esplorazione <span>→</span>`;
     }
+  }
+
+  startPresentation(n = 0) {
+    this.start(n);
+    this.togglePresent(true);
   }
 
   start(n = 0) {
@@ -764,6 +737,7 @@ export class CosmosApp {
     this.renderStage();
     this.renderPanel();
     this.renderPresentChrome();
+    this.clearSelection();
 
     const step = this.steps[n];
     try {
@@ -781,20 +755,24 @@ export class CosmosApp {
 
   renderTop() {
     const s = this.steps[this.current];
-    $("#cs-top-section").textContent = s.section;
-    $("#cs-top-title").textContent = s.title;
-    $("#cs-panel-section").textContent = s.section;
-    $("#cs-panel-count").textContent = `Tappa ${String(s.n).padStart(2, "0")} / 32`;
-    $("#cs-panel-title").textContent = s.title;
-    $("#cs-panel-kicker").textContent = s.kicker || s.sectionTitle;
-    $("#cs-slide-ref").textContent = `Slide originale ${String(s.n).padStart(2, "0")} / 32`;
-    $("#cs-bottom-section").textContent = s.section;
-    $("#cs-bottom-count").textContent = `${String(s.n).padStart(2, "0")} / 32`;
-    $("#cs-bottom-date").textContent = s.section === "UDA 2"
+    const setText = (sel, text) => {
+      const el = $(sel, this.root);
+      if (el) el.textContent = text;
+    };
+    setText("#cs-top-section", s.section);
+    setText("#cs-top-title", s.title);
+    setText("#cs-panel-section", s.section);
+    setText("#cs-panel-count", `Tappa ${String(s.n).padStart(2, "0")} / 32`);
+    setText("#cs-panel-title", s.title);
+    setText("#cs-panel-kicker", s.kicker || s.sectionTitle);
+    setText("#cs-slide-ref", `Slide originale ${String(s.n).padStart(2, "0")} / 32`);
+    setText("#cs-bottom-section", s.section);
+    setText("#cs-bottom-count", `${String(s.n).padStart(2, "0")} / 32`);
+    setText("#cs-bottom-date", s.section === "UDA 2"
       ? "Sistema Solare · UDA 2"
       : s.section === "UDA 3"
         ? "Stelle e galassie · UDA 3"
-        : "Tempo cosmico";
+        : "Tempo cosmico");
   }
 
   renderNav() {
@@ -894,11 +872,40 @@ export class CosmosApp {
   }
 
   renderPresentChrome() {
-    $("#cs-present-count").textContent = `${String(this.current + 1).padStart(2, "0")} / 32`;
-    $("#cs-present-title").textContent = this.steps[this.current].title;
+    const count = $("#cs-present-count", this.root);
+    const title = $("#cs-present-title", this.root);
+    if (count) count.textContent = `${String(this.current + 1).padStart(2, "0")} / 32`;
+    if (title) title.textContent = this.steps[this.current].title;
+    const cfg = this.stageConfig[this.steps[this.current].n];
+    const tool = $("#cs-present-tool", this.root);
+    if (tool) tool.hidden = !cfg || cfg.type === "atlas";
+  }
+
+  setSelection(selection) {
+    this.selection = selection || null;
+    const box = $("#cs-present-selection", this.root);
+    if (!box) return;
+    box.hidden = !this.selection;
+    if (!this.selection) return;
+    const name = $("#cs-present-selection-name", this.root);
+    const kind = $("#cs-present-selection-kind", this.root);
+    if (name) name.textContent = this.selection.name || "Oggetto";
+    if (kind) kind.textContent = this.selection.kind || "";
+    this.setTarget(this.selection.name || this.steps[this.current].title);
+  }
+
+  clearSelection() {
+    this.selection = null;
+    const box = $("#cs-present-selection", this.root);
+    if (box) box.hidden = true;
+    const step = this.steps[this.current];
+    const cfg = this.stageConfig[step.n] || {};
+    this.setTarget(cfg.targetLabel || step.atlas || step.title);
   }
 
   renderPanel() {
+    // The right teaching panel has been removed in presentation-first mode.
+    if (!$("#cs-panel-content", this.root)) return;
     const step = this.steps[this.current];
     const cfg = this.stageConfig[step.n] || {};
 
@@ -1241,6 +1248,8 @@ export class CosmosApp {
     if (this.freeAtlas) return;
     if (!this.active) this.start(this.savedStep || 0);
     this.closeModal();
+    this.freeAtlasWasPresenting = this.presenting;
+    if (this.presenting) this.togglePresent(false);
     this.presenting = false;
     this.root.classList.remove("cs-presenting");
     this.cardOpen = false;
@@ -1327,6 +1336,8 @@ export class CosmosApp {
     const bar = document.getElementById("cosmos-free-quickbar");
     if (bar) bar.remove();
     this.go(this.current);
+    if (this.freeAtlasWasPresenting) this.togglePresent(true);
+    this.freeAtlasWasPresenting = false;
     this.onExitFreeAtlas?.();
   }
 
@@ -1342,6 +1353,7 @@ export class CosmosApp {
     $("#cs-modal-body", this.root).innerHTML = bodyHTML;
     this.lastFocus = document.activeElement;
     this.modal.hidden = false;
+    this.modal.classList.remove("is-slide");
     this.root.classList.add("cs-modal-open");
     requestAnimationFrame(() => $(".cs-modal-close", this.root)?.focus());
   }
@@ -1351,6 +1363,8 @@ export class CosmosApp {
     this.slideInstance?.destroy?.();
     this.slideInstance = null;
     this.modal.hidden = true;
+    this.modal.classList.remove("is-slide");
+    this.slideOpen = false;
     this.root.classList.remove("cs-modal-open");
     $("#cs-modal-body", this.root).innerHTML = "";
     if (this.lastFocus && document.contains(this.lastFocus)) this.lastFocus.focus();
@@ -1359,17 +1373,30 @@ export class CosmosApp {
   openSlide(n = this.current) {
     const step = this.steps[n];
     if (!step) return;
+    this.slideInstance?.destroy?.();
+    this.slideInstance = null;
+    this.slideIndex = n;
+    this.slideOpen = true;
     this.openModal(
-      `Slide originale · ${String(step.n).padStart(2, "0")} / 32`,
+      `Slide originale · ${String(n + 1).padStart(2, "0")} / 32`,
       step.title,
-      `<div class="cs-slide-modal" id="cs-slide-modal-body"></div>`
+      `<div class="cs-slide-modal">
+        <div class="cs-slide-nav">
+          <button type="button" data-cs="slide-prev" aria-label="Slide precedente" ${n === 0 ? "disabled" : ""}>‹</button>
+          <span id="cs-slide-index">${String(n + 1).padStart(2, "0")} / 32</span>
+          <button type="button" data-cs="slide-next" aria-label="Slide successiva" ${n === this.steps.length - 1 ? "disabled" : ""}>›</button>
+        </div>
+        <div class="cs-slide-viewer" id="cs-slide-modal-body"></div>
+        <div class="cs-slide-hint">Rotella o pinch per zoom · trascina per spostarti · ← / → per cambiare slide · Esc per chiudere</div>
+      </div>`
     );
+    this.modal.classList.add("is-slide");
     const host = $("#cs-slide-modal-body", this.root);
     this.slideInstance = mountImageStage({
       src: step.slide,
       alt: `Slide ${step.n}: ${step.title}`,
-      caption: `Slide originale ${step.n} della presentazione UDA 2 e 3. Le note del relatore e le correzioni sono accessibili nella scheda Approfondisci.`,
-      credit: "Materiale didattico UDA 2 e 3 · Alta risoluzione",
+      caption: `Slide originale ${step.n} della presentazione UDA 2 e 3.`,
+      credit: "Materiale didattico UDA 2 e 3",
       aspect: "landscape",
       eyebrow: "Presentazione originale",
     }, host);
@@ -1416,6 +1443,10 @@ export class CosmosApp {
                 </div>
               </section>`;
           }).join("")}
+        </div>
+        <div class="cs-atlas-actions">
+          <button type="button" data-cs="quiz">Interrogazione</button>
+          <button type="button" data-cs="sources">Fonti e crediti</button>
         </div>
       </div>`;
 

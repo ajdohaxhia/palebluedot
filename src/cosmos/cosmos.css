@@ -1685,38 +1685,87 @@ body.cosmos-mode { background: #03060a; overflow: hidden; }
 .cs-present-actions { display: flex; align-items: center; gap: 6px; margin-left: auto; }
 .cs-present-bottom {
   position: absolute;
-  bottom: 20px;
+  bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 8px 14px;
-  border-radius: 999px;
+  gap: 16px;
+  min-height: 54px;
+  padding: 10px 18px;
+  border-radius: 18px;
   border: 1px solid var(--cs-line-strong);
-  background: rgba(5,9,14,.88);
-  backdrop-filter: blur(20px);
+  background: rgba(5,9,14,.9);
+  backdrop-filter: blur(24px) saturate(180%);
   pointer-events: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.65);
+  max-width: calc(100vw - 24px);
 }
-.cs-present-bottom button {
-  padding: 6px 10px;
-  border-radius: 4px;
+.cs-present-bottom > button {
+  min-height: 36px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
   color: var(--cs-silver);
-  font-size: 9px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  transition: color .2s;
-}
-.cs-present-bottom button:hover { color: var(--cs-gold-light); }
-.cs-present-bottom span {
-  color: #fff;
   font-size: 10px;
-  max-width: 440px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  transition: color .2s, background .2s, border-color .2s;
+}
+.cs-present-bottom > button:hover {
+  color: var(--cs-gold-light);
+  border-color: var(--cs-line);
+  background: rgba(255,255,255,.05);
+}
+#cs-present-tool {
+  border-color: var(--cs-line);
+  color: var(--cs-muted);
+}
+#cs-present-title {
+  color: #fff;
+  font-size: 12px;
+  max-width: 380px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.cs-present-selection {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-right: 14px;
+  border-right: 1px solid var(--cs-line);
+}
+.cs-present-selection[hidden] { display: none; }
+.cs-present-selection .cs-kicker { color: var(--cs-cyan); font-size: 7.5px; }
+.cs-present-selection b {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#cs-present-selection-kind {
+  color: var(--cs-muted);
+  font-family: var(--cs-mono);
+  font-size: 8px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.cs-present-selection button {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--cs-line);
+  color: var(--cs-muted);
+  font-size: 14px;
+}
+.cs-present-selection button:hover { color: #fff; border-color: var(--cs-red); }
 
 /* Virtual Laser Pointer */
 .cs-laser-dot {
@@ -3892,3 +3941,207 @@ body.cosmos-free-atlas #layers-button:hover {
   }
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/* Full-stage presentation: no left index / right teaching panel               */
+/* -------------------------------------------------------------------------- */
+@media (min-width: 861px) {
+  .cs-stage-top,
+  .cs-chips,
+  .cs-stage-hint { left: 24px; right: 24px; }
+  .cs-stage-card { left: 24px; width: min(620px, calc(100vw - 48px)); }
+  .cs-stage-cam-tools { right: 24px; }
+}
+
+@media (max-width: 860px) {
+  .cs-present-bottom {
+    left: 8px;
+    right: 8px;
+    bottom: 12px;
+    transform: none;
+    width: auto;
+    max-width: none;
+    min-height: 0;
+    padding: 8px 10px;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cs-present-selection {
+    flex-basis: 100%;
+    justify-content: center;
+    padding-right: 0;
+    padding-bottom: 6px;
+    border-right: 0;
+    border-bottom: 1px solid var(--cs-line);
+  }
+  #cs-present-title { flex: 1 1 100%; max-width: none; text-align: center; font-size: 11px; }
+  .cs-present-bottom > button { min-height: 32px; padding: 6px 9px; }
+  .cs-presenting .cs-present-top { left: 10px; right: 10px; }
+  .cs-present-brand > span:first-child { display: none; }
+  .cs-present-timer { display: none; }
+  .cs-present-actions button { min-width: 30px; padding: 0 7px; font-size: 8px; }
+  .cs-stage-card { left: 10px; right: 10px; width: auto; bottom: 76px; height: min(44vh, 360px); }
+  .cs-presenting .cs-stage-card { left: 10px; right: 10px; top: auto; bottom: 86px; width: auto; height: min(38vh, 340px); }
+  .cs-chips { bottom: 76px; }
+}
+
+/* Slightly larger LIM bottom scale dock: touch targets on the classroom board. */
+@media (max-height: 800px) {
+  .cs-lim-scales-scroll { padding: 8px 12px; gap: 8px; }
+  .cs-lim-scale-chip { min-width: 126px; padding: 7px 11px; }
+  .cs-lim-scale-chip b { font-size: 12px; }
+}
+
+/* Clean presentation canvas: the chrome and the bottom dock are the controls. */
+.cs-presenting .cs-stage-top,
+.cs-presenting .cs-chips,
+.cs-presenting .cs-stage-hint,
+.cs-presenting .cs-atlas-overlay { display: none !important; }
+
+/* Slightly larger LIM bottom scale dock for touch/projected use. */
+.cs-lim-scales-scroll { gap: 8px; padding: 8px 12px; }
+.cs-lim-scale-chip { min-width: 132px; padding: 9px 12px; }
+.cs-lim-scale-chip b { font-size: 12px; }
+
+/* Near-fullscreen slide reviewer. Controls float over the slide. */
+.cs-modal.is-slide { padding: 1vh 1vw; }
+.cs-modal.is-slide .cs-modal-panel {
+  width: 98vw;
+  height: 98vh;
+  max-height: 98vh;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: #020408;
+}
+.cs-modal.is-slide .cs-modal-head {
+  position: absolute;
+  top: 8px; left: 10px; right: 10px;
+  z-index: 6;
+  padding: 6px 10px;
+  border: 0;
+  background: linear-gradient(180deg, rgba(3,6,10,.9), rgba(3,6,10,0));
+  pointer-events: none;
+}
+.cs-modal.is-slide .cs-modal-head h2 {
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-shadow: 0 2px 12px #000;
+}
+.cs-modal.is-slide .cs-modal-head .cs-kicker { font-size: 7.5px; }
+.cs-modal.is-slide .cs-modal-close {
+  pointer-events: auto;
+  width: 30px; height: 30px;
+  background: rgba(3,6,10,.75);
+  backdrop-filter: blur(14px);
+}
+.cs-modal.is-slide .cs-modal-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.cs-modal.is-slide .cs-slide-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: #010204;
+}
+.cs-slide-nav {
+  position: absolute;
+  top: 8px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--cs-line-strong);
+  background: rgba(3,6,10,.82);
+  backdrop-filter: blur(16px);
+}
+.cs-slide-nav button {
+  width: 34px; height: 28px;
+  display: grid; place-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--cs-silver);
+  font-size: 18px;
+}
+.cs-slide-nav button:hover:not(:disabled) { color: var(--cs-gold-light); border-color: var(--cs-line); background: rgba(255,255,255,.06); }
+.cs-slide-nav button:disabled { opacity: .25; cursor: default; }
+#cs-slide-index {
+  color: var(--cs-gold-light);
+  font-family: var(--cs-mono);
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+.cs-modal.is-slide .cs-slide-viewer {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+}
+.cs-modal.is-slide .cs-slide-viewer .cs-image-stage {
+  height: 100%;
+  min-height: 0;
+}
+.cs-modal.is-slide .cs-slide-viewer .cs-iv-top,
+.cs-modal.is-slide .cs-slide-viewer .cs-iv-foot { display: none; }
+.cs-modal.is-slide .cs-slide-viewer .cs-iv-viewport {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  border: 0;
+  background: #010204;
+}
+.cs-modal.is-slide .cs-slide-viewer .cs-iv-canvas img {
+  max-width: 98vw;
+  max-height: 98vh;
+}
+.cs-slide-hint {
+  position: absolute;
+  bottom: 8px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(3,6,10,.72);
+  color: rgba(200,212,226,.7);
+  font-family: var(--cs-mono);
+  font-size: 8px;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.cs-atlas-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+.cs-atlas-actions button {
+  padding: 8px 13px;
+  border: 1px solid var(--cs-line);
+  border-radius: 4px;
+  color: var(--cs-muted);
+  font-size: 9px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.cs-atlas-actions button:hover { color: var(--cs-gold-light); border-color: var(--cs-gold-light); }
+
+@media (max-width: 860px) {
+  .cs-modal.is-slide { padding: 0; }
+  .cs-modal.is-slide .cs-modal-panel { width: 100vw; height: 100vh; max-height: 100vh; border: 0; }
+  .cs-slide-nav { top: auto; bottom: 38px; }
+  .cs-slide-hint { bottom: 10px; font-size: 7px; max-width: 92vw; overflow: hidden; text-overflow: ellipsis; }
+  .cs-modal.is-slide .cs-modal-head { top: 6px; left: 6px; right: 6px; }
+  .cs-modal.is-slide .cs-modal-head h2 { font-size: 12px; }
+  .cs-modal.is-slide .cs-slide-viewer .cs-iv-canvas img { max-width: 100vw; max-height: calc(100vh - 96px); }
+}
